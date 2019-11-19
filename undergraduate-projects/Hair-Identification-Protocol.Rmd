@@ -42,6 +42,8 @@ Additionally, we sampled hair from historic specimens of ringtail (n = 4) and ro
 
 ### Analysis and expected results: 
 
+Working documents and data are currently stored on [Google Drive](https://drive.google.com/open?id=1xpGG_qLciDeOMZSpf2elKqzLclJl59lI).
+
 *Species occurrences* 
 
 We will assign species identity by comparing hair traits (length, diameter, coloration) of field-collected to reference museum and roadkill collected individuals. If necessary, we will use confirmatory PCR. 
