@@ -1,0 +1,82 @@
+---
+title: "Mammalian-Hair-Protocol"
+author: "Anna Willoughby"
+date: "November 18, 2019"
+output:
+  html_document:
+    df_print: paged
+---
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+
+```
+
+# PROTOCOL FOR: 
+# Mammalian hair as an indicator of species identity and diet quality in human-modified habitats
+
+_Last updated: November 18, 2019_
+
+## Authors: 
+
+* Anna Willoughby
+
+### Background: 
+
+Species identification is a critical task for understanding animal presence, population levels, and habitat-use. In mammals, passive surveillance techniques like cameras and hair-snag traps offer solutions for detecting elusive animals in remote areas. Despite their ease of use, these devices present challenges in their methodology due to a lack of reference guides and standardized processing methods. Here, we will validate taxonomic identity classification based on hair traits by comparing hairs collected in the field through baited hair tunnels (n = 200) and species-identified museum specimens (n = 200). Tunnel locations occurred at sites with variable human visitation and access to human resources in southern Utah and were paired camera surveillance. Some likely species include rock squirrels, desert cottontail, and Uinta chipmunks. We will calculate the average diameter of the hairs, structure of the medulla, and arrangement of cuticular scales by microscope viewing. Once we have speciated hairs, we will perform isotope analyses at UGA’s Center for Applied Isotope Studies. These isotope measures will inform the type of diet the animals consumed (degree of vertebrate prey, plants, invertebrates or human food). Lastly, we will use hair information and isotopic elements to compare a gradient of animal use and diet in human-modified landscapes.
+
+### Research questions:
+1. Do Utah small mammals have species-distinguishable hair traits?
+
+2. What species of small mammals use baited hair tunnels?
+
+3. Do small mammal diets vary across a gradient of tourism intensity? 
+
+4. Does small mammal abundance and communities vary across a gradient of tourism intensity?
+
+### Study design: 
+We will deploy hair trap transects in sites of variable tourism intensity during July and August of 2019. We have selected seven sites listed from low to high tourism: Beaver Dam Wash (BLM), Cedar Breaks Monument (NPS), Eagle Crags (BLM), Kolob Canyons (NPS), Snow Canyon (Utah DNR), Oak Creek (NPS), Zion Canyon (NPS). 
+
+Following Harrison (2013), we constructed tunnels with Corpolast plastic (Coroplast, Dallas, TX). Plastic was folded to form an equilateral triangle tunnel 60 cm long with sides 12 cm wide. Along the ceiling of each tunnel we will attach four strips of glue paper (Tomcat glue board, Motomco, Clearwater, FL; 2 cm x 10 cm). Approximately eight raisins will be placed in the middle of the tunnel with one raisin at either entrance (10 total). A teaspoon smear of raccoon olfactory lure (Big Stinky, Grawe's Lures, Wahpeton, ND) will be applied to the outside of one entrance. Sides of the tunnel will be closed with two strips of velcro tape (2 cm x 8 cm strips).  Each transect consists of 5 tunnels spaced 100 m apart for a total length of 500 m. Tunnels are placed at least 250 m from trail and within 1 km of water. Tunnels are checked after one week. Glue strips are removed, covered with saran wrap, and stored in a dry, room-temperature labeled bag. Traps are re-baited and provided fresh glue strips for an additional week. We consider each week of deployment per transect as a hair-trap event. Use of a hair tunnel, rather than alternative methods such as metal hair snares, has several benefits for preserving hair for DNA and isotope analyses by keeping captured hair unexposed to sunlight or rain. In addition to deploying hair tunnels at each site, we also collected GPS coordinates and microhabitat data (vegetation cover, canopy cover). 
+
+Additionally, we sampled hair from historic specimens of ringtail (n = 4) and rock squirrel (n = 7) from the Zion National Park Museum, as well as one road-killed ringtail found in August 2019 in Snow Canyon State Park. Lastly, hair was opportunistically collected from ringtail latrines in Zion National Park, which either includes hair from ringtail prey or ringtail hair due to grooming. 
+
+### Analysis and expected results: 
+
+*Species occurrences* 
+
+We will assign species identity by comparing hair traits (length, diameter, coloration) of field-collected to reference museum and roadkill collected individuals. If necessary, we will use confirmatory PCR. 
+
+We will compared species occurrence, richness, and community composition across sites. We expect species richness to be greater in sites with limited human impact (e.g. Beaver Dam Wash). We expect that species with omnivorous diet (ringtails, rock squirrels) to be more likely to occur in human-modified areas. 
+
+*Diet elemental outcome*
+
+At the Center for Applied Isotope Studies, hair samples will be oven-dried, ball-milled to less than 250 micrometer particle size (talc-like consistency) and weighed (~3 mg, with μg digits significant) into 9 x 5 mm tin capsules before combustion on a Thermo Delta V isotope ratio mass spectrometer. Ionized combustion product is mass-analyzed by means of differing mass/charge ratios among the various isotopic species of N2 and CO2. This will provide isotope-ratio values of delta 13C and delta 15N. 
+
+Following Hopkins et al. (2014), we expect that the contemporary specimens will exhibit higher delta 13C signatures than historic specimens due to increased consumption of human-influenced resources that contain corn syrup due to increasing tourist visitation. We would expect this effect to be greated among omnivourous, generalist species (e.g. ringtails and rock squirrels) than specialist granivorous species such as lagomorphs or small rodents. Additionally, we expect these omnivourous species to have increased delta 15N signatures due to consumption of meat-based refuse such as discarded sandwich meat, or, in the case of ringtails, increased consumption of rodents in buildings. We expect to find these temporal patterns as well as spatial patterns of increased C and N in areas with greater tourist infrastructure (trash cans, buildings) and thus access to human resources.
+
+
+### Checklist: 
+- Extract hair traits from the literature atlases (Mayer 1952; Stains 1958; Debelica & Thies 2009)
+- Literature search for alternative hair metrics/methodolgy
+- Measure traits of museum + roadkill hairs (n = 12)
+- Remove and clean hair from glue strips (n = 208)
+- Measure traits of reference sample from field collected hairs (n = 208)
+- Measure traits of any latrine collected hairs (n = TBD)
+- Determine best species match by hair traits
+- Analyze community composition by site area
+- Prepare subsamples for isotope or genetic analyses
+- Perform isotope work at the Center for Applied Isotope Analyses
+- Analyze and visualize isotope data with sites colored by tourism intensity
+
+### Important background papers: 
+Debelica A, Thies ML. Atlas and key to the hair of terrestrial Texas mammals. Museum of Texas Tech University; 2009; 55.
+
+Harrison RL. Ringtail (*Bassariscus astutus*) noninvasive survey methods, density, and occupancy in central New Mexico, USA. *Western North American Naturalist*. 2013 Nov;73(3):365-73.
+
+Hopkins III JB, Koch PL, Ferguson JM, Kalinowski ST. The changing anthropogenic diets of American black bears over the past century in Yosemite National Park. *Frontiers in Ecology and the Environment*. 2014 Mar;12(2):107-14.
+
+Mayer WV. The hair of California mammals with keys to the dorsal guard hairs of California mammals. *The American Midland Naturalist*. 1952 Sep 1;48(2):480-512.
+
+Stains HJ. Field key to guard hair of middle western furbearers. The Journal of Wildlife Management. 1958 Jan 1;22(1):95-7.
+
+### CHANGE-LOG:
