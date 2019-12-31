@@ -58,19 +58,21 @@ Following Hopkins et al. (2014), we expect that the contemporary specimens will 
 
 
 ### Checklist: 
-- Extract hair traits from the literature atlases (Mayer 1952; Stains 1958; Debelica & Thies 2009)
-- Literature search for alternative hair metrics/methodolgy
+- Extract hair traits from the literature atlases (Mayer 1952; Stains 1958; Arita & Aranda 1987; Debelica & Thies 2009)
+- Literature search for alternative hair metrics/methodologies
 - Measure traits of museum + roadkill hairs (n = 12)
 - Remove and clean hair from glue strips (n = 208)
 - Measure traits of reference sample from field collected hairs (n = 208)
 - Measure traits of any latrine collected hairs (n = TBD)
 - Determine best species match by hair traits
 - Analyze community composition by site area
-- Prepare subsamples for isotope or genetic analyses
+- Prepare subsamples for isotopic or genetic analyses
 - Perform isotope work at the Center for Applied Isotope Analyses
-- Analyze and visualize isotope data with sites colored by tourism intensity
+- Analyze and visualize occurence and isotope data with sites colored by tourism intensity
 
 ### Important background papers: 
+Arita HT, Aranda M. Técnica para el Estudio y Clasificación de los Pelos. Instituto Nacional de Investigaciones sobre Recursos Bióticos; 1987.
+
 Debelica A, Thies ML. Atlas and key to the hair of terrestrial Texas mammals. Museum of Texas Tech University; 2009; 55.
 
 Harrison RL. Ringtail (*Bassariscus astutus*) noninvasive survey methods, density, and occupancy in central New Mexico, USA. *Western North American Naturalist*. 2013 Nov;73(3):365-73.
