@@ -1,0 +1,85 @@
+---
+title: "Scat Fragment Analysis Protocol"
+author: "Anna Willoughby"
+date: "July 18, 2020"
+output:
+  html_document:
+    df_print: paged
+---
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+
+```
+
+# PROTOCOL FOR: 
+# Mammalian latrines as an indicator of diet composition in human-modified habitats
+
+_Last updated: July 18, 2020_
+
+## Authors: 
+
+* Anna Willoughby
+
+### Background: 
+
+Ringtails are known to feed on a wide variety of vertebrates, invertebrates, and plants. Access to tourist resources, however, may skew natural diet choice away from native species to discarded human food such as candy bars or cooked meat. We will assess ringtail diet composition through macroscopic fragment analysis, to later compare with molecular methods. 
+
+
+### Research questions:
+1. Do ringtails exhibit feeding preferences based on human-use areas? 
+H0: Ringtails will exhibit similar diets in high and low tourism areas. 
+H1: Ringtails in high tourism areas (public access buildings) will eat more tourist-provided items and exhibit than low tourism intensity areas (employee-only areas or trails)
+H2: Ringtails in high tourism areas will feed more on rodent prey due greater rodent use of human buildings.
+
+2. Does ringtail diet diversity depend on availability of human resources? 
+H0: Ringtails will exhibit similar diet diversities in high and low tourism areas. 
+H1: Ringtails in high tourism areas (public access buildings) will exhibit diminished diet diversity due to a greater reliance on tourist-provided resources
+H2: Ringtails in high tourism areas will exhibit increased diet diversity due to supplemental use of human resources. 
+
+3. Do rodents in high human use areas feed on anthropogenic resources? 
+H0: Prey hair collected from ringtail latrines will exhibit similar isotopic signatures regardless of latrine location. 
+H1: Prey hair in high tourism areas (public access buildings) will exhibit higher carbon signatures due to use of tourist-provided items than low tourism intensity areas (employee-only areas or trails)
+
+### Study design: 
+Latrines from known ringtail-use buildings were collected during July and August of 2019, as well as select opportunistic scat from trails and campground. 
+
+### Analysis and expected results: 
+
+Working documents and data are currently stored on [Google Drive](https://drive.google.com/drive/folders/1cVOD9a0A9DKjS9GKHL3NcU9L2hVmYCkv?usp=sharing).
+
+*Species occurrences* 
+
+We will assign species identity by comparing diet fragments to a reference guide of potential prey items availabile in Zion. 
+
+We will compared species occurrence, richness, and community composition across latrine sites. We expect species richness to be greater in sites with limited human impact (e.g. Beaver Dam Wash). We expect that species with omnivorous diet (ringtails, rock squirrels) to be more likely to occur in human-modified areas. 
+
+
+
+*Diet elemental outcome*
+
+At the Center for Applied Isotope Studies, prey hair samples will be oven-dried, ball-milled to less than 250 micrometer particle size (talc-like consistency) and weighed (~3 mg, with μg digits significant) into 9 x 5 mm tin capsules before combustion on a Thermo Delta V isotope ratio mass spectrometer. Ionized combustion product is mass-analyzed by means of differing mass/charge ratios among the various isotopic species of N2 and CO2. This will provide isotope-ratio values of delta 13C and delta 15N. 
+
+We expect that hair from latrines in public accesss buildings will exhibit higher delta 13C signatures than private access buildings or trails due to increased consumption of human-influenced resources that contain corn syrup due to increasing tourist visitation.
+
+### Checklist: 
+- Dry samples at 60 C for 72 hours (Cherry et al. 2016)
+- Weigh, wash, and separate diet items 
+- Each found item should be recorded the mass, size, category (bone, plant, anthropogenic). If plastic also include colour and if any erosion and input into spreadsheet. 
+- Document items with pictures
+- Create reference key of relevant mammals and plants 
+
+### Seive Protocol 
+- Wear gloves and lab coat, pull hair back. Be sure to not wear petrochemical or lint-prone fibers, instead wear cotton. 
+- Weigh each scat
+- Place in a 1 mm stainless steel seive
+- Wash with filtered water. Water can be heated to assist in filtering process. 
+- Separate out anthropogenic contents (see the guide from CLEAR Lab book)
+- Conduct controls. This consists of a piece of double-stick tape open in petri dish to catch lint/air-borne contaminants changed weekly, as well as a running water through the sieve once daily. 
+- In between uses, the sieve and tubs should be cleaned and disinfected with bleach (10%) for ten minutes and all counters disinfected. 
+
+### Important background papers: 
+Cherry MJ, Turner KL, Howze MB, Cohen BS, Conner LM, Warren RJ. Coyote diets in a longleaf pine ecosystem. Wildlife Biology. 2016 Mar;22(2):64-70.
+
+White CG, Flinders JT, Cates RG, Blackwell BH, Smith HD. Dietary Use of Utah Juniper Berries by Gray Fox in Eastern Utah. Proceedings RMRS. 1998(9):219.
+
+### CHANGE-LOG:
