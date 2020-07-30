@@ -3,6 +3,7 @@ title: "Scat Fragment Analysis Protocol"
 author: "Anna Willoughby"
 date: "July 18, 2020"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
@@ -27,18 +28,25 @@ Ringtails are known to feed on a wide variety of vertebrates, invertebrates, and
 
 ### Research questions:
 1. Do ringtails exhibit feeding preferences based on human-use areas? 
-H0: Ringtails will exhibit similar diets in high and low tourism areas. 
-H1: Ringtails in high tourism areas (public access buildings) will eat more tourist-provided items and exhibit than low tourism intensity areas (employee-only areas or trails)
-H2: Ringtails in high tourism areas will feed more on rodent prey due greater rodent use of human buildings.
+- H0: Ringtails will exhibit similar diets in high and low tourism areas. 
+
+- H1: Ringtails in high tourism areas (public access buildings) will eat more tourist-provided items and exhibit than low tourism intensity areas (employee-only areas or trails)
+
+- H2: Ringtails in high tourism areas will feed more on rodent prey due greater rodent use of human buildings.
 
 2. Does ringtail diet diversity depend on availability of human resources? 
-H0: Ringtails will exhibit similar diet diversities in high and low tourism areas. 
-H1: Ringtails in high tourism areas (public access buildings) will exhibit diminished diet diversity due to a greater reliance on tourist-provided resources
-H2: Ringtails in high tourism areas will exhibit increased diet diversity due to supplemental use of human resources. 
+
+- H0: Ringtails will exhibit similar diet diversities in high and low tourism areas. 
+
+- H1: Ringtails in high tourism areas (public access buildings) will exhibit diminished diet diversity due to a greater reliance on tourist-provided resources
+
+- H2: Ringtails in high tourism areas will exhibit increased diet diversity due to supplemental use of human resources. 
 
 3. Do rodents in high human use areas feed on anthropogenic resources? 
-H0: Prey hair collected from ringtail latrines will exhibit similar isotopic signatures regardless of latrine location. 
-H1: Prey hair in high tourism areas (public access buildings) will exhibit higher carbon signatures due to use of tourist-provided items than low tourism intensity areas (employee-only areas or trails)
+
+- H0: Prey hair collected from ringtail latrines will exhibit similar isotopic signatures regardless of latrine location. 
+
+- H1: Prey hair in high tourism areas (public access buildings) will exhibit higher carbon signatures due to use of tourist-provided items than low tourism intensity areas (employee-only areas or trails)
 
 ### Study design: 
 Latrines from known ringtail-use buildings were collected during July and August of 2019, as well as select opportunistic scat from trails and campground. 
@@ -57,12 +65,13 @@ We will compared species occurrence, richness, and community composition across 
 
 *Diet elemental outcome*
 
-At the Center for Applied Isotope Studies, prey hair samples will be oven-dried, ball-milled to less than 250 micrometer particle size (talc-like consistency) and weighed (~3 mg, with μg digits significant) into 9 x 5 mm tin capsules before combustion on a Thermo Delta V isotope ratio mass spectrometer. Ionized combustion product is mass-analyzed by means of differing mass/charge ratios among the various isotopic species of N2 and CO2. This will provide isotope-ratio values of delta 13C and delta 15N. 
+At the Center for Applied Isotope Studies, prey hair samples will be oven-dried, ball-milled to less than 250 micrometer particle size (talc-like consistency) and weighed (~3 mg) into 9 x 5 mm tin capsules before combustion on a Thermo Delta V isotope ratio mass spectrometer. Ionized combustion product is mass-analyzed by means of differing mass/charge ratios among the various isotopic species of N2 and CO2. This will provide isotope-ratio values of delta 13C and delta 15N. 
 
 We expect that hair from latrines in public accesss buildings will exhibit higher delta 13C signatures than private access buildings or trails due to increased consumption of human-influenced resources that contain corn syrup due to increasing tourist visitation.
 
 ### Checklist: 
 - Dry samples at 60 C for 72 hours (Cherry et al. 2016)
+- Select ten representative scat segments for seive analysis per latrine
 - Weigh, wash, and separate diet items 
 - Each found item should be recorded the mass, size, category (bone, plant, anthropogenic). If plastic also include colour and if any erosion and input into spreadsheet. 
 - Document items with pictures
