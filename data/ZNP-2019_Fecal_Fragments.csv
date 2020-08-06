@@ -1,0 +1,369 @@
+LatrineBag,LatrineSite,Initials,Segment,Fragment,FragmentType,FragmentDescription,EmptyEnvelopeWeight_g,DryEnvelopeWeight_g,DriedFragmentWeight,,,,,,,,,,,
+S11,MY_Delivery,CA,S11_S01_0720,S11_S01_F1,Vertebrate,Bone Fragments,1.3,1.3712,0.0712,,,,,,,,,,,Brown Paper Napkin
+S11,MY_Delivery,CA,S11_S01_0720,S11_S01_F2,Vertebrate,Hair,1.3,1.489,0.189,,,,,,,,,,,Brown Paper Napkin
+S11,MY_Delivery,CA,S11_S02_0720,S11_S02_F1,Anthropogenic,Paper Napkin,1.3,1.7674,0.4674,,,,,,,,,,,Brown Paper Napkin
+S11,MY_Delivery,CA,S11_S02_0720,S11_S02_F2,Vertebrate,Hair,1.3,1.4551,0.1551,,,,,,,,,,,Brown Paper Napkin
+S11,MY_Delivery,CA,S11_S03_0720,S11_S03_F1,Vertebrate,Hair,1.3,1.4393,0.1393,,,,,,,,,,,Brown Paper Napkin
+S11,MY_Delivery,CA,S11_S03_0720,S11_S03_F2,Vertebrate,Bone Fragments,1.3,1.3992,0.0992,,,,,,,,,,,Brown Paper Napkin
+S11,MY_Delivery,CA,S11_S04_0720,S11_S04_F1,Contaminant,Insulation,1.3,1.3596,0.0596,,,,,,,,,,,Brown Paper Napkin
+S11,MY_Delivery,CA,S11_S04_0720,S11_S04_F2,Vertebrate,Hair,1.3,1.5086,0.2086,,,,,,,,,,,Brown Paper Napkin
+S11,MY_Delivery,CA,S11_S04_0720,S11_S04_F3,Vertebrate,Bone Fragments,1.3,1.4215,0.1215,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S05_0720,S11_S05_F1,Anthropogenic,Paper,1.3,1.6137,0.3137,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S05_0720,S11_S05_F2,Vertebrate,Bone Fragments,1.3,1.4874,0.1874,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S06_0720,S11_S06_F1,Anthropogenic,Clear Plastic,1.3,1.3488,0.0488,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S06_0720,S11_S06_F2,Vertebrate,Hair,1.3,1.4421,0.1421,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S06_0720,S11_S06_F3,Anthropogenic,Paper,1.3,1.4054,0.1054,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S06_0720,S11_S06_F4,Vertebrate,Bone Fragments,1.3,1.4038,0.1038,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S07_0720,S11_S07_F1,Vertebrate,Hair,1.3,1.4191,0.1191,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S08_0720,S11_S08_F1,Anthropogenic,Clorox Wipe,1.3,1.5453,0.2453,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S09_0720,S11_S09_F1,Vertebrate,Bone Fragments,1.3,1.385,0.085,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S09_0720,S11_S09_F2,Vertebrate,Hair,1.3,1.4636,0.1636,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S09_0720,S11_S09_F3,Plant,Seeds,1.3,1.4326,0.1326,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S10_0720,S11_S10_F1,Contaminant,Insulation,1.3,1.3946,0.0946,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S10_0720,S11_S10_F2,Vertebrate,Bone Fragments,1.3,1.4298,0.1298,,,,,,,,,,,Paper
+S11,MY_Delivery,CA,S11_S10_0720,S11_S10_F3,Vertebrate,Hair,1.3,1.5636,0.2636,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S01_0720,S12_S01_F1,Vertebrate,Feather,1.3,1.3797,0.0797,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S01_0720,S12_S01_F2,Vertebrate,Hair,1.3,1.374,0.074,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S02_0720,S12_S02_F1,Anthropogenic,Paper,1.3,1.6038,0.3038,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S02_0720,S12_S02_F2,Vertebrate,Hair,1.3,1.8794,0.5794,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S02_0720,S12_S02_F3,Vertebrate,Bone Fragments,1.3,1.3881,0.0881,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S03_0720,S12_S03_F1,Vertebrate,Bone Fragments,1.3,1.4256,0.1256,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S04_0720,S12_S04_F1,Anthropogenic,Paper,1.3,1.6303,0.3303,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S04_0720,S12_S04_F2,Plant,Plant Material,1.3,1.4421,0.1421,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S05_0720,S12_S05_F1,Anthropogenic,Paper,1.3,1.373,0.073,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S05_0720,S12_S05_F2,Anthropogenic,Clear Plastic,1.3,1.3677,0.0677,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S06_0720,S12_S06_F1,Anthropogenic,Paper,1.3,2.3521,1.0521,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S07_0720,S12_S07_F1,Anthropogenic,Paper Napkin,1.3,1.4452,0.1452,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S07_0720,S12_S07_F2,Anthropogenic,Wax Paper,1.3,1.5488,0.2488,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S07_0720,S12_S07_F3,Anthropogenic,Foil,1.3,1.4222,0.1222,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S07_0720,S12_S07_F4,Anthropogenic,Gray Plastic Bag,1.3,1.3561,0.0561,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S08_0720,S12_S08_F1,Anthropogenic,Paper,1.3,1.5101,0.2101,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S08_0720,S12_S08_F2,Vertebrate,Bone Fragments,1.3,1.4322,0.1322,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S09_0720,S12_S09_F1,Vertebrate,Bone Fragments,1.3,1.4133,0.1133,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S09_0720,S12_S09_F2,Vertebrate,Hair,1.3,1.7136,0.4136,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S09_0720,S12_S09_F3,Contaminant,Insulation,1.3,1.3972,0.0972,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S10_0720,S12_S10_F1,Anthropogenic,Paper Napkin,1.3,1.603,0.303,,,,,,,,,,,Paper
+S12,MY_Delivery,CA,S12_S10_0720,S12_S10_F2,Vertebrate,Bone Fragments,1.3,1.396,0.096,,,,,,,,,,,Paper
+S13,MY_Showers,AW,S13_S01_0120,S13_S01_F1,Invertebrate,Invertebrate Hair,1.2,2.2181,1.0181,,,,,,,,,,,Paper
+S13,MY_Showers,AW,S13_S01_0120,S13_S01_F2,Vertebrate,Bone Fragments,1.2,1.3032,0.1032,,,,,,,,,,,Paper
+S13,MY_Showers,AW,S13_S01_0120,S13_S01_F3,Vertebrate,3 Teeth and Jaw Fragment,1.1,1.1855,0.0855,,,,,,,,,,,Paper
+S13,MY_Showers,AW,S13_S01_0120,S13_S01_F4,Invertebrate,Arthropod Fragments,1.1,1.2813,0.1813,,,,,,,,,,,Paper
+S13,MY_Showers,AW,S13_S01_0120,S13_S01_F5,Anthropogenic,Paper,1.2,1.252,0.052,,,,,,,,,,,Paper
+S13,MY_Showers,AW,S13_S01_0120,S13_S01_F6,Unknown,Unknown ID,1.2,1.4269,0.2269,,,,,,,,,,,Paper
+S13,MY_Showers,CA,S13_S02_0720,S13_S02_F1,Contaminant,Insulation,1.1,1.1756,0.0756,,,,,,,,,,,Paper
+S13,MY_Showers,CA,S13_S02_0720,S13_S02_F2,Anthropogenic,Paper,1.2,2.6443,1.4443,,,,,,,,,,,Paper
+S13,MY_Showers,CA,S13_S02_0720,S13_S02_F3,Anthropogenic,Apple/ Stemmed fruit,1.2,1.5979,0.3979,,,,,,,,,,,Paper
+S13,MY_Showers,CA,S13_S02_0720,S13_S02_F4,Unknown,Unknown ID,1.2,1.2584,0.0584,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S03_0720,S13_S03_F1,Vertebrate,Bone Fragments,1.1,1.3737,0.2737,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S03_0720,S13_S03_F2,Invertebrate,Arthropod Fragments,1.1,1.1748,0.0748,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S03_0720,S13_S03_F3,Anthropogenic,Paper,1.1,1.1565,0.0565,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S03_0720,S13_S03_F4,Vertebrate,Hair,1.2,1.2865,0.0865,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S03_0720,S13_S03_F5,Vertebrate,Feathers,1.1,1.1715,0.0715,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S03_0720,S13_S03_F6,Plant,Plant Material,1.1,1.1158,0.0158,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S03_0720,S13_S03_F7,Unknown,Unknown ID,1.2,1.2797,0.0797,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S04_0720,S13_S04_F1,Vertebrate,Bone Fragments,1.2,1.6471,0.4471,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S04_0720,S13_S04_F2,Vertebrate,Hair,1.2,2.2436,1.0436,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S04_0720,S13_S04_F3,Plant,Plant Material,1.1,1.1977,0.0977,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S04_0720,S13_S04_F4,Invertebrate,Arthropod Fragments,1,1.0872,0.0872,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S04_0720,S13_S04_F5,Unknown,Unknown ID,1.2,1.288,0.088,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S05_0720,S13_S05_F1,Vertebrate,Bone Fragments,1.2,1.5435,0.3435,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S05_0720,S13_S05_F2,Vertebrate,Hair,1.2,1.5166,0.3166,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S05_0720,S13_S05_F3,Vertebrate,Teeth,1.1,1.1942,0.0942,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S05_0720,S13_S05_F4,Unknown,Unknown ID,1.2,1.2143,0.0143,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S06_0720,S13_S06_F1,Vertebrate,Bone Fragments,1.2,1.2904,0.0904,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S06_0720,S13_S06_F2,Anthropogenic,Paper,1.2,1.2673,0.0673,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S06_0720,S13_S06_F3,Vertebrate,Hair,1.1,1.1089,0.0089,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S06_0720,S13_S06_F4,Plant,Fruit,1.2,1.2621,0.0621,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S06_0720,S13_S06_F5,Invertebrate,Arthropod Fragments,1.1,1.1956,0.0956,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S06_0720,S13_S06_F6,Unknown,Unknown ID,1.2,1.264,0.064,,,,,,,,,,,Plastic 
+S13,MY_Showers,CA,S13_S07_0720,S13_S07_F1,Anthropogenic,Plastic,1.1,1.1631,0.0631,,,,,,,,,,,Wipe
+S13,MY_Showers,CA,S13_S07_0720,S13_S07_F2,Vertebrate,Teeth,1.1,1.3221,0.2221,,,,,,,,,,,Wax Paper
+S13,MY_Showers,CA,S13_S07_0720,S13_S07_F3,Anthropogenic,Paper,1.2,1.4926,0.2926,,,,,,,,,,,Wax Paper
+S13,MY_Showers,CA,S13_S07_0720,S13_S07_F4,Vertebrate,Hair,1.2,1.2634,0.0634,,,,,,,,,,,Wax Paper
+S13,MY_Showers,CA,S13_S07_0720,S13_S07_F5,Vertebrate,Bone Fragments,1.2,1.2115,0.0115,,,,,,,,,,,Foil
+S13,MY_Showers,CA,S13_S07_0720,S13_S07_F6,Invertebrate,Arthropod Fragments,1.2,1.3327,0.1327,,,,,,,,,,,Foil
+S13,MY_Showers,CA,S13_S08_0720,S13_S08_F1,Vertebrate,Hair,1.2,2.3334,1.1334,,,,,,,,,,,Foil
+S13,MY_Showers,CA,S13_S08_0720,S13_S08_F2,Vertebrate,Bone Fragments,1.2,1.3477,0.1477,,,,,,,,,,,Foil
+S13,MY_Showers,CA,S13_S08_0720,S13_S08_F3,Plant,Seeds,1.1,1.1653,0.0653,,,,,,,,,,,Foil
+S13,MY_Showers,CA,S13_S08_0720,S13_S08_F4,Anthropogenic,Paper,1.1,1.1608,0.0608,,,,,,,,,,,Foil
+S13,MY_Showers,CA,S13_S09_0720,S13_S09_F1,Vertebrate,Hair,1.2,2.3447,1.1447,,,,,,,,,,,Foil
+S13,MY_Showers,CA,S13_S09_0720,S13_S09_F2,Vertebrate,Bone Fragments,1.1,1.2404,0.1404,,,,,,,,,,,Foil
+S13,MY_Showers,CA,S13_S09_0720,S13_S09_F3,Vertebrate,Teeth,1.2,1.2637,0.0637,,,,,,,,,,,Plastic Bag
+S13,MY_Showers,CA,S13_S09_0720,S13_S09_F4,Invertebrate,Arthropod Fragments,1.2,1.2311,0.0311,,,,,,,,,,,Plastic Bag
+S13,MY_Showers,CA,S13_S10_0720,S13_S10_F1,Anthropogenic,Paper,1.1,1.7465,0.6465,,,,,,,,,,,Plastic Bag
+S13,MY_Showers,CA,S13_S10_0720,S13_S10_F2,Vertebrate,Bone Fragments,1.2,1.3336,0.1336,,,,,,,,,,,Plastic Bag
+S13,MY_Showers,CA,S13_S10_0720,S13_S10_F3,Vertebrate,Hair,1.2,1.2286,0.0286,,,,,,,,,,,Plastic Bag
+S13,MY_Showers,CA,S13_S10_0720,S13_S10_F4,Anthropogenic,Wax Paper,1.1,1.1829,0.0829,,,,,,,,,,,Plastic Bag
+S19,MY_Roadhouse,ZB,S19_S01_25J19,S19_S01_25J19_F1,Anthropogenic,Paper,,,0,,,,,,,,,,,Apple
+S19,MY_Roadhouse,ZB,S19_S01_25J19,S19_S01_25J19_F2,Plant,Plant Material,,,0,,,,,,,,,,,Apple
+S19,MY_Roadhouse,ZB,S19_S01_25J19,S19_S01_25J19_F3,Invertebrate,Arthropod Fragments,,,0,,,,,,,,,,,Cotton/Fabric
+S19,MY_Roadhouse,ZB,S19_S01_25J19,S19_S01_25J19_F4,Anthropogenic,Plastic,,,0,,,,,,,,,,,Cotton/Fabric
+S19,MY_Roadhouse,CA,S19_S01_0720,S19_S01_F1,Plant,Seeds,1.2,2.999,1.799,,,,,,,,,,,Cotton/Fabric
+S19,MY_Roadhouse,CA,S19_S01_0720,S19_S01_F2,Vertebrate,Bone Fragments,1.1,1.1214,0.0214,,,,,,,,,,,Cotton/Fabric
+S19,MY_Roadhouse,CA,S19_S01_0720,S19_S01_F3,Vertebrate,Teeth,1.1,1.1538,0.0538,,,,,,,,,,,Cotton/Fabric
+S19,MY_Roadhouse,CA,S19_S01_0720,S19_S01_F4,Vertebrate,Hair,1.2,2.2021,1.0021,,,,,,,,,,,Cotton/Fabric
+S19,MY_Roadhouse,CA,S19_S01_0720,S19_S01_F5,Anthropogenic,Plastic/Paper,1.1,1.161,0.061,,,,,,,,,,,Cotton/Fabric
+S19,MY_Roadhouse,ZB,S19_S02_25J19,S19_S02_25J19_F1,Anthropogenic,Paper ,,,0,,,,,,,,,,,Cotton/Fabric
+S19,MY_Roadhouse,ZB,S19_S02_25J19,S19_S02_25J19_F2,Anthropogenic,Plastic,,,0,,,,,,,,,,,Cotton/Fabric
+S19,MY_Roadhouse,ZB,S19_S02_25J19,S19_S02_25J19_F3,Vertebrate,Animal proteins,,,0,,,,,,,,,,,Glass
+S19,MY_Roadhouse,ZB,S19_S02_25J19,S19_S02_25J19_F4,Plant,Plant Material (seeds),,,0,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S02_0720,S19_S02_F1,Anthropogenic,Plastic Bag,1.1,1.1602,0.0602,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S02_0720,S19_S02_F2,Vertebrate,Hair,1.2,1.2184,0.0184,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S02_0720,S19_S02_F3,Anthropogenic,Paper,1.1,1.1354,0.0354,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S02_0720,S19_S02_F4,Plant,Seeds,1.2,1.2175,0.0175,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S02_0720,S19_S02_F5,Invertebrate,Arthropod Fragments,1.3,1.3491,0.0491,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S02_0720,S19_S02_F6,Vertebrate,Bone Fragments,1.3,1.3727,0.0727,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S03_25J19,S19_S03_25J19_F1,Anthropogenic,Paper,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S03_25J19,S19_S03_25J19_F2,Plant,Plant Material,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S03_0720,S19_S03_F1,Anthropogenic,Paper,1.4,1.4145,0.0145,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S03_0720,S19_S03_F2,Vertebrate,Hair,1.4,1.684,0.284,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S03_0720,S19_S03_F3,Plant,Seeds,1.3,1.3721,0.0721,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S03_0720,S19_S03_F4,Invertebrate,Arthropod Fragments,1.4,1.4052,0.0052,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S04_25J19,S19_S04_25J19_F1,Anthropogenic,Paper,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S04_25J19,S19_S04_25J19_F2,Plant,Plant Material,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S04_0720,S19_S04_F1,Vertebrate,Bone Fragments,1.3,1.4434,0.1434,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S04_0720,S19_S04_F2,Unknown,Unknown ID,1.4,2.2854,0.8854,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S05_25J19,S19_S05_25J19_F1,Anthropogenic,Plastic,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S05_25J19,S19_S05_25J19_F2,Plant,Plant Material,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S05_25J19,S19_S05_25J19_F3,Anthropogenic,Paper,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S05_0720,S19_S05_F1,Anthropogenic,Paper,1.3,1.5004,0.2004,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S05_0720,S19_S05_F2,Invertebrate,Arthropod Fragments,1.3,1.3981,0.0981,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S05_0720,S19_S05_F3,Vertebrate,Hair,1.4,1.5796,0.1796,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S05_0720,S19_S05_F4,Vertebrate,Bone Fragments,1.3,1.3955,0.0955,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S06_25J19,S19_S06_25J19_F1,Invertebrate,Arthropod Fragments,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S06_25J19,S19_S06_25J19_F1,Vertebrate,Bone,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S06_25J19,S19_S06_25J19_F2,Vertebrate,Hair,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S06_25J19,S19_S06_25J19_F3,Anthropogenic,Paper,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S06_25J19,S19_S06_25J19_F4,Plant,Plant ,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S06_0720,S19_S06_F1,Plant,Seeds,1.3,1.511,0.211,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S06_0720,S19_S06_F2,Anthropogenic,Plastic,1.4,1.5551,0.1551,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S06_0720,S19_S06_F3,Vertebrate,Hair,1.3,1.3778,0.0778,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S06_0720,S19_S06_F4,Unknown,Unknown ID,1.4,1.6439,0.2439,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S07_25J19,S19_S07_25J19_F1,Anthropogenic,WovenMaterial,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S07_25J19,S19_S07_25J19_F2,Anthropogenic,Paper,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S07_25J19,S19_S07_25J19_F3,Plant,PlantMaterial,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S07_0720,S19_S07_F1,Vertebrate,Hair,1.4,1.5174,0.1174,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S07_0720,S19_S07_F2,Invertebrate,Arthropod Fragments,1.4,1.4183,0.0183,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S07_0720,S19_S07_F3,Vertebrate,Bone Fragments,1.3,1.4716,0.1716,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S07_0720,S19_S07_F4,Vertebrate,Teeth,1.4,1.4745,0.0745,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S07_0720,S19_S07_F5,Anthropogenic,Paper,1.3,1.3136,0.0136,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S08_25J19,S19_S08_25J19_F1,Plant,PlantMaterial,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S08_25J19,S19_S08_25J19_F2,Invertebrate,Arthropod Fragments,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S08_25J19,S19_S08_25J19_F3,Vertebrate,Hair,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S08_0720,S19_S08_F1,Vertebrate,Hair,1.3,1.3649,0.0649,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S08_0720,S19_S08_F2,Unknown,Unknown ID,1.3,1.3761,0.0761,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S08_0720,S19_S08_F3,Invertebrate,Arthropod Fragments,1.3,1.3381,0.0381,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S09_25J19,S19_S09_25J19_F1,Plant,PlantMaterial,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S09_25J19,S19_S09_25J19_F2,Vertebrate,Bone,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S09_25J19,S19_S09_25J19_F3,Vertebrate,Hair,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,ZB,S19_S09_25J19,S19_S09_25J19_F4,Anthropogenic,Paper,,,0,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S09_0720,S19_S09_F1,Anthropogenic,Paper,1.3,1.4035,0.1035,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S09_0720,S19_S09_F2,Anthropogenic,Plastic Wrapper,1.3,1.3503,0.0503,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S10_0720,S19_S10_F1,Anthropogenic,Plastic/Glue Chunks,1.4,1.7935,0.3935,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S10_0720,S19_S10_F2,Anthropogenic,Paper,1.4,1.7807,0.3807,,,,,,,,,,,
+S19,MY_Roadhouse,CA,S19_S10_0720,S19_S10_F3,Anthropogenic,Plastic Bag,1.4,1.4061,0.0061,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S01_0720,S21_S01_F1,Anthropogenic,Blue Fabric,1.3,1.3817,0.0817,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S01_0720,S21_S01_F2,Anthropogenic,Plastic,1.3,1.5843,0.2843,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S01_0720,S21_S01_F3,Anthropogenic,Paper,1.3,1.4031,0.1031,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S01_0720,S21_S01_F4,Plant,Seeds,1.3,1.4121,0.1121,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S01_0720,S21_S01_F5,Anthropogenic,Cotton,1.3,1.4357,0.1357,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S02_0720,S21_S02_F1,Vertebrate,Hair,1.3,1.6211,0.3211,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S02_0720,S21_S02_F2,Vertebrate,Bone Fragments,1.3,1.5436,0.2436,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S02_0720,S21_S02_F3,Plant,Seeds,1.3,1.4058,0.1058,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S02_0720,S21_S02_F4,Invertebrate,Arthropod Fragments,1.3,1.3655,0.0655,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S03_0720,S21_S03_F1,Vertebrate,Bone Fragments,1.3,1.4054,0.1054,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S03_0720,S21_S03_F2,Vertebrate,Hair,1.3,1.5276,0.2276,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S04_0720,S21_S04_F1,Vertebrate,Bone Fragments,1.3,1.4812,0.1812,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S04_0720,S21_S04_F2,Vertebrate,Hair,1.3,1.4887,0.1887,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S04_0720,S21_S04_F3,Invertebrate,Arthropod Fragments,1.3,1.3696,0.0696,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S04_0720,S21_S04_F4,Anthropogenic,Glass,1.3,1.3464,0.0464,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S04_0720,S21_S04_F5,Contaminant,Insulation,1.3,1.4067,0.1067,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S05_0720,S21_S05_F1,Vertebrate,Bone Fragments,1.3,1.4064,0.1064,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S05_0720,S21_S05_F2,Vertebrate,Hair,1.3,1.4554,0.1554,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S05_0720,S21_S05_F3,Vertebrate,Snakeskin,1.3,1.3573,0.0573,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S06_0720,S21_S06_F1,Anthropogenic,Apple/Fruit,1.3,1.5957,0.2957,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S06_0720,S21_S06_F2,Vertebrate,Hair,1.3,1.4186,0.1186,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S06_0720,S21_S06_F3,Plant,Seeds,1.3,1.3782,0.0782,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S07_0720,S21_S07_F1,Anthropogenic,Paper,1.3,1.3688,0.0688,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S07_0720,S21_S07_F2,Vertebrate,Bone Fragments,1.3,1.3965,0.0965,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S08_0720,S21_S08_F1,Vertebrate,Bone Fragments,1.3,1.4647,0.1647,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S08_0720,S21_S08_F2,Vertebrate,Hair,1.3,1.4255,0.1255,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S08_0720,S21_S08_F3,Plant,Seeds,1.3,1.3736,0.0736,,,,,,,,,,,
+S21,ZL_FrontDesk,CA,S21_S08_0720,S21_S08_F4,Anthropogenic,Plastic,1.3,1.3949,0.0949,,,,,,,,,,,
+S24,ZC_ZL-ServerStation,ZB,S24_S01_25J19,S24_S01_25J19_F1,Invertebrate,Insect,,,0,,,,,,,,,,,
+S24,ZC_ZL-ServerStation,ZB,S24_S01_25J19,S24_S01_25J19_F2,Vertebrate,Bone,,,0,,,,,,,,,,,
+S24,ZC_ZL-ServerStation,ZB,S24_S01_25J19,S24_S01_25J19_F3,Vertebrate,hair,,,0,,,,,,,,,,,
+S24,ZC_ZL-ServerStation,ZB,S24_S01_25J19,S24_S01_25J19_F4,Plant,Plant,,,0,,,,,,,,,,,
+S24,ZC_ZL-ServerStation,ZB,S24_S01_25J19,S24_S01_25J19_F5,Anthropogenic,AnthropogenicFiber,,,0,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S01_0720,S24_S01_F1,Anthropogenic,Paper/Insulation,1.3,1.3546,0.0546,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S01_0720,S24_S01_F2,Vertebrate,Hair,1.3,1.301,0.001,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S01_0720,S24_S01_F3,Invertebrate,Arthropod Fragments,1.3,1.8398,0.5398,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S02_0720,S24_S02_F1,Anthropogenic,Paper,1.3,1.5949,0.2949,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S02_0720,S24_S02_F2,Invertebrate,Arthropod Fragments,1.3,1.5571,0.2571,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S02_0720,S24_S02_F3,Vertebrate,Hair,1.3,1.3366,0.0366,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S03_0720,S24_S03_F1,Anthropogenic,Paper ,1.3,1.4414,0.1414,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S03_0720,S24_S03_F2,Vertebrate,Hair,1.3,1.3039,0.0039,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S03_0720,S24_S03_F3,Invertebrate,Arthropod Fragments,1.3,1.3655,0.0655,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S03_0720,S24_S03_F4,Unknown,Unknown ID,1.3,1.5551,0.2551,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S04_0720,S24_S04_F1,Invertebrate,Arthropod Fragments,1.3,1.3743,0.0743,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S04_0720,S24_S04_F2,Plant,Seed Casings,1.3,1.5474,0.2474,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S04_0720,S24_S04_F3,Anthropogenic,Paper/Insulation,1.3,1.3711,0.0711,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S05_0720,S24_S05_F1,Invertebrate,Arthropod Fragments,1.4,1.4195,0.0195,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S05_0720,S24_S05_F2,Vertebrate,Hair,1.3,1.349,0.049,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S05_0720,S24_S05_F3,Anthropogenic,Cotton,1.3,1.3524,0.0524,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S06_0720,S24_S06_F1,Anthropogenic,Foil,1.3,1.3502,0.0502,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S06_0720,S24_S06_F2,Vertebrate,Hair,1.3,1.3978,0.0978,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S06_0720,S24_S06_F3,Vertebrate,Bone Fragments,1.3,1.3055,0.0055,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S06_0720,S24_S06_F4,Plant,Seed Casings,1.3,1.3858,0.0858,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S06_0720,S24_S06_F5,Contaminant,Insulation,1.3,1.3468,0.0468,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S07_0720,S24_S07_F1,Invertebrate,Arthropod Fragments,1.3,1.3634,0.0634,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S07_0720,S24_S07_F2,Contaminant,Insulation,1.3,1.3488,0.0488,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S07_0720,S24_S07_F3,Plant,Leaf,1.3,1.3721,0.0721,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S07_0720,S24_S07_F4,Vertebrate,Hair,1.3,1.42,0.12,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S08_0720,S24_S08_F1,Invertebrate,Arthropod Fragments,1.3,1.383,0.083,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S08_0720,S24_S08_F2,Plant,Seeds,1.3,1.3968,0.0968,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S09_0720,S24_S09_F1,Contaminant,Insulation,1.3,1.3628,0.0628,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S09_0720,S24_S09_F2,Invertebrate,Arthropod Fragments,1.3,1.3138,0.0138,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S09_0720,S24_S09_F3,Plant,Seeds,1.3,1.4151,0.1151,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S10_0720,S24_S10_F1,Unknown,Unknown ID,1.3,1.3875,0.0875,,,,,,,,,,,
+S24,ZC_ZL-ServerStation ,CA,S24_S10_0720,S24_S10_F2,Invertebrate,Arthropod Fragments,1.3,1.5478,0.2478,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,ZB,S25_S01_25J19,S25_S01_25J19_F1,Anthropogenic,Plastic,,,0,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,ZB,S25_S01_25J19,S25_S01_25J19_F2,Vertebrate,Hair,,,0,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,ZB,S25_S01_25J19,S25_S01_25J19_F3,Vertebrate,Bone,,,0,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,ZB,S25_S01_25J19,S25_S01_25J19_F4,Plant,PlantMaterial,,,0,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,ZB,S25_S01_25J19,S25_S01_25J19_F5,Invertebrate,Arthropod Fragments,,,0,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S01_0720,S25_S01_F1,Plant,Seeds,1.3,1.7207,0.4207,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S01_0720,S25_S01_F2,Plant,Seed Casings,1.3,1.3431,0.0431,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S01_0720,S25_S01_F3,Anthropogenic,Plastic,1.3,1.3958,0.0958,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S01_0720,S25_S01_F4,Contaminant,Insulation,1.3,1.3716,0.0716,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S02_0720,S25_S02_F1,Plant,Seeds,1.3,1.6611,0.3611,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S02_0720,S25_S02_F2,Contaminant,Insulation,1.3,1.3889,0.0889,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S02_0720,S25_S02_F3,Unknown,Unknown ID,1.3,1.4359,0.1359,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S03_0720,S25_S03_F1,Plant,Seeds/Seed Casings,1.3,1.4071,0.1071,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S03_0720,S25_S03_F2,Unknown,Unknown ID,1.3,1.375,0.075,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S04_0720,S25_S04_F1,Plant,Seeds,1.3,1.6267,0.3267,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S04_0720,S25_S04_F2,Invertebrate,Arthropod Fragments,1.3,1.3642,0.0642,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S04_0720,S25_S04_F3,Vertebrate,Hair,1.3,1.4297,0.1297,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S04_0720,S25_S04_F4,Plant,Seed Casings,1.3,1.4263,0.1263,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S04_0720,S25_S04_F5,Anthropogenic,Paper/Plastic,1.3,1.3675,0.0675,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S05_0720,S25_S05_F1,Anthropogenic,Paper/Insulation,1.3,1.5653,0.2653,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S05_0720,S25_S05_F2,Plant,Seeds,1.3,1.3806,0.0806,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S05_0720,S25_S05_F3,Vertebrate,Bone Fragments,1.3,1.3734,0.0734,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S06_0720,S25_S06_F1,Vertebrate,Bone Fragments,1.3,1.5666,0.2666,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S06_0720,S25_S06_F2,Vertebrate,Hair,1.3,1.484,0.184,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S06_0720,S25_S06_F3,Vertebrate,Teeth,1.3,1.3182,0.0182,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S07_0720,S25_S07_F1,Plant,Seeds ,1.3,1.4325,0.1325,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S07_0720,S25_S07_F2,Vertebrate,Bone Fragments,1.3,1.3704,0.0704,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S07_0720,S25_S07_F3,Vertebrate,Hair,1.3,1.4943,0.1943,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S08_0720,S25_S08_F1,Invertebrate,Arthropod Fragments,1.3,1.4313,0.1313,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S08_0720,S25_S08_F2,Vertebrate,Hair,1.3,1.4804,0.1804,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S09_0720,S25_S09_F1,Invertebrate,Arthropod Fragments,1.3,1.306,0.006,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S09_0720,S25_S09_F2,Vertebrate,Bone Fragments,1.4,1.4542,0.0542,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S09_0720,S25_S09_F3,Contaminant,Insulation,1.3,1.3178,0.0178,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S09_0720,S25_S09_F4,Anthropogenic,Plastic,1.3,1.358,0.058,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S10_0720,S25_S10_F1,Plant,Seeds,1.3,1.7561,0.4561,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S10_0720,S25_S10_F2,Vertebrate,Bone Fragments,1.3,1.3543,0.0543,,,,,,,,,,,
+S25,ZC_ZL-FrontDesk,CA,S25_S10_0720,S25_S10_F3,Contaminant,Insulation,1.3,1.3541,0.0541,,,,,,,,,,,
+S35,ZL_GiftShop_5A19,CA,S35_S01_0720,S35_S01_F1,Plant,Plant Material,1.3,1.4878,0.1878,,,,,,,,,,,
+S35,ZL_GiftShop_5A19,CA,S35_S02_0720,S35_S02_F1,Anthropogenic,Paper,1.3,1.4029,0.1029,,,,,,,,,,,
+S35,ZL_GiftShop_5A19,CA,S35_S02_0720,S35_S02_F2,Plant,Plant Material,1.4,1.5068,0.1068,,,,,,,,,,,
+S35,ZL_GiftShop_5A19,CA,S35_S03_0720,S35_S03_F1,Unknown,Unknown- Fruit,1.3,1.5951,0.2951,,,,,,,,,,,
+S35,ZL_GiftShop_5A19,CA,S35_S04_0720,S35_S04_F1,Plant,Plant Material,1.3,1.6094,0.3094,,,,,,,,,,,
+S35,ZL_GiftShop_5A19,CA,S35_S04_0720,S35_S04_F2,Anthropogenic,Plastic,1.3,1.4454,0.1454,,,,,,,,,,,
+S35,ZL_GiftShop_5A19,CA,S35_S04_0720,S35_S04_F3,Plant,Seeds,1.3,1.4369,0.1369,,,,,,,,,,,
+S35,ZL_GiftShop_5A19,CA,S35_S04_0720,S35_S04_F4,Invertebrate,Arthropod Fragments,1.3,1.3893,0.0893,,,,,,,,,,,
+S36,ZL_Fireplace1,CA,S36_S01_0720,S36_S01_F1,Contaminant,Insulation,1.3,1.4924,0.1924,,,,,,,,,,,
+S36,ZL_Fireplace1,CA,S36_S02_0720,S36_S02_F1,Contaminant,Insulation,1.3,1.405,0.105,,,,,,,,,,,
+S36,ZL_Fireplace1,CA,S36_S02_0720,S36_S02_F2,Unknown,Unknown ID,1.3,1.454,0.154,,,,,,,,,,,
+S36,ZL_Fireplace1,CA,S36_S03_0720,S36_S03_F1,Contaminant,Insulation,1.3,1.4038,0.1038,,,,,,,,,,,
+S36,ZL_Fireplace1,CA,S36_S04_0720,S36_S04_F1,Contaminant,Insulation,1.3,1.4337,0.1337,,,,,,,,,,,
+S36,ZL_Fireplace1,CA,S36_S04_0720,S36_S04_F2,Vertebrate,Hair,1.3,1.3903,0.0903,,,,,,,,,,,
+S36,ZL_Fireplace1,CA,S36_S05_0720,S36_S05_F1,Contaminant,Insulation,1.3,1.5871,0.2871,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S01_0720,S37_S01_F1,Anthropogenic,Foil,1.3,1.322,0.022,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S01_0720,S37_S01_F2,Invertebrate,Arthropod Fragments,1.3,1.3551,0.0551,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S01_0720,S37_S01_F3,Anthropogenic,Cotton/Insulation,1.3,1.3368,0.0368,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S02_0720,S37_S02_F1,Anthropogenic,Paper/Insulation,1.3,1.5586,0.2586,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S02_0720,S37_S02_F2,Plant,Seeds,1.3,1.3316,0.0316,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S03_0720,S37_S03_F1,Contaminant,Insulation,1.3,1.461,0.161,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S03_0720,S37_S03_F2,Vertebrate,Hair,1.3,2.0436,0.7436,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S03_0720,S37_S03_F3,Vertebrate,Bone Fragments,1.3,1.3457,0.0457,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S03_0720,S37_S03_F4,Organic,Rock,1.3,1.3244,0.0244,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S04_0720,S37_S04_F1,Plant,Seeds,1.3,1.4196,0.1196,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S04_0720,S37_S04_F2,Invertebrate,Arthropod Fragments,1.3,1.3921,0.0921,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S04_0720,S37_S04_F3,Anthropogenic,Plastic,1.3,1.3923,0.0923,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S05_0720,S37_S05_F1,Vertebrate,Hair,1.3,1.6132,0.3132,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S05_0720,S37_S05_F2,Anthropogenic,Paper/Insulation,1.3,1.3853,0.0853,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S06_0720,S37_S06_F1,Anthropogenic,Paper,1.3,1.4131,0.1131,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S06_0720,S37_S06_F2,Invertebrate,Arthropod Fragments,1.3,1.3521,0.0521,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S06_0720,S37_S06_F3,Plant,Seeds,1.3,1.3073,0.0073,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S07_0720,S37_S07_F1,Vertebrate,Hair,1.3,1.4609,0.1609,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S07_0720,S37_S07_F2,Anthropogenic,Cotton/Insulation,1.3,1.3949,0.0949,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S08_0720,S37_S08_F1,Anthropogenic,String,1.3,1.3141,0.0141,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S08_0720,S37_S08_F2,Anthropogenic,Foil,1.3,1.3571,0.0571,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S08_0720,S37_S08_F3,Contaminant,Insulation,1.3,1.3381,0.0381,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S08_0720,S37_S08_F4,Anthropogenic,Paper,1.2,1.2965,0.0965,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S08_0720,S37_S08_F5,Invertebrate,Arthropod Fragments,1.3,1.3618,0.0618,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S09_0720,S37_S09_F1,Vertebrate,Hair,1.3,1.5361,0.2361,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S09_0720,S37_S09_F2,Contaminant,Insulation,1.3,1.365,0.065,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S09_0720,S37_S09_F3,Anthropogenic,Foil,1.3,1.4056,0.1056,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S09_0720,S37_S09_F4,Anthropogenic,Plastic,1.2,1.2928,0.0928,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S09_0720,S37_S09_F5,Organic,Rock,1.3,1.6111,0.3111,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S09_0720,S37_S09_F6,Plant,Seeds,1.3,1.341,0.041,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S10_0720,S37_S10_F1,Vertebrate,Hair,1.3,1.7001,0.4001,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S10_0720,S37_S10_F2,Anthropogenic,Plastic,1.3,1.3969,0.0969,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S10_0720,S37_S10_F3,Unknown,Unknown ID,1.3,1.3832,0.0832,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S10_0720,S37_S10_F4,Contaminant,Insulation,1.3,1.3232,0.0232,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S10_0720,S37_S10_F5,Invertebrate,Arthropod Fragments,1.3,1.378,0.078,,,,,,,,,,,
+S37,ZL_Fireplace2,CA,S37_S10_0720,S37_S10_F6,Anthropogenic,Paper,1.3,1.3504,0.0504,,,,,,,,,,,
+S4,MY_Delivery,CA,S4_S01_0720,S4_S01_F1,Vertebrate,Bone Fragments,1.4,1.4485,0.0485,,,,,,,,,,,
+S4,MY_Delivery,CA,S4_S01_0720,S4_S01_F2,Invertebrate,Arthropod Fragments,1.3,1.4298,0.1298,,,,,,,,,,,
+S4,MY_Delivery,CA,S4_S02_0720,S4_S02_F1,Anthropogenic,Paper,1.3,2.0319,0.7319,,,,,,,,,,,
+S4,MY_Delivery,CA,S4_S02_0720,S4_S02_F2,Anthropogenic,Foil,1.3,1.4414,0.1414,,,,,,,,,,,
+S4,MY_Delivery,CA,S4_S02_0720,S4_S02_F3,Anthropogenic,Black Plastic Bag,1.3,1.6365,0.3365,,,,,,,,,,,
+S4,MY_Delivery,CA,S4_S02_0720,S4_S02_F4,Anthropogenic,Clear Plastic,1.3,1.3733,0.0733,,,,,,,,,,,
+S5,MY_Showers,CA,S5_S01_0720,S5_S01_F1,Plant,Plant Material,1.3,1.5634,0.2634,,,,,,,,,,,
+S5,MY_Showers,CA,S5_S02_0720,S5_S02_F1,Vertebrate,Bone Fragments,1.3,1.5356,0.2356,,,,,,,,,,,
+S5,MY_Showers,CA,S5_S02_0720,S5_S02_F2,Contaminant,Insulation,1.3,1.3373,0.0373,,,,,,,,,,,
+S5,MY_Showers,CA,S5_S03_0720,S5_S03_F1,Vertebrate,Bone Fragments,1.3,1.4093,0.1093,,,,,,,,,,,
+S5,MY_Showers,CA,S5_S04_0720,S5_S04_F1,Anthropogenic,Paper,1.3,2.1049,0.8049,,,,,,,,,,,
+S5,MY_Showers,CA,S5_S05_0720,S5_S05_F1,Invertebrate,Arthropod Fragments,1.3,1.407,0.107,,,,,,,,,,,
+S5,MY_Showers,CA,S5_S05_0720,S5_S05_F2,Vertebrate,Bone Fragments,1.3,1.4181,0.1181,,,,,,,,,,,
+S5,MY_Showers,CA,S5_S05_0720,S5_S05_F3,Vertebrate,Hair,1.3,1.5758,0.2758,,,,,,,,,,,
+S5,MY_Showers,CA,S5_S06_0720,S5_S06_F1,Unknown,Unknown ID,1.3,1.4881,0.1881,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S01_0720,S6_S01_F1,Unknown,Unknown ID,1.3,1.4418,0.1418,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S01_0720,S6_S01_F2,Anthropogenic,Black Plastic Bag,1.3,1.3864,0.0864,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S02_0720,S6_S02_F1,Plant,Seeds,1.3,1.4832,0.1832,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S02_0720,S6_S02_F2,Anthropogenic,Plastic,1.3,1.4516,0.1516,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S03_0720,S6_S03_F1,Vertebrate,Feather,1.3,1.4571,0.1571,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S03_0720,S6_S03_F2,Vertebrate,Bone Fragments,1.3,1.4476,0.1476,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S04_0720,S6_S04_F1,Anthropogenic,White Plastic Bag,1.3,1.3944,0.0944,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S05_0720,S6_S05_F1,Vertebrate,Bone Fragments,1.3,1.4325,0.1325,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S05_0720,S6_S05_F2,Vertebrate,Feather,1.3,1.6532,0.3532,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S06_0720,S6_S06_F1,Anthropogenic,Paper with Text,1.3,1.3961,0.0961,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S06_0720,S6_S06_F2,Plant,Berry/Seeds,1.3,1.4731,0.1731,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S06_0720,S6_S06_F3,Anthropogenic,Foil,1.3,1.3752,0.0752,,,,,,,,,,,
+S6,MY_SignShop,CA,S6_S06_0720,S6_S06_F4,Anthropogenic,Red Fibers,1.3,1.3408,0.0408,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S01_0720,S7_S01_F1,Vertebrate,Bone Fragments,1.3,1.5294,0.2294,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S01_0720,S7_S01_F2,Vertebrate,Hair,1.3,2.2351,0.9351,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S02_0720,S7_S02_F1,Anthropogenic,Paper Napkin,1.3,1.5927,0.2927,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S02_0720,S7_S02_F2,Vertebrate,Bone Fragments,1.4,1.4056,0.0056,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S03_0720,S7_S03_F1,Invertebrate,Arthropod Fragments,1.3,1.4669,0.1669,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S03_0720,S7_S03_F2,Vertebrate,Hair,1.3,1.4067,0.1067,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S04_0720,S7_S04_F1,Anthropogenic,Paper,1.3,1.5013,0.2013,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S04_0720,S7_S04_F2,Vertebrate,Bone Fragments,1.3,1.4381,0.1381,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S05_0720,S7_S05_F1,Anthropogenic,Paper Napkin,1.3,1.4898,0.1898,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S06_0720,S7_S06_F1,Anthropogenic,Paper Napkin,1.3,1.6345,0.3345,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S07_0720,S7_S07_F1,Anthropogenic,Foil,1.3,1.3441,0.0441,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S07_0720,S7_S07_F2,Anthropogenic,Clear Plastic,1.3,1.4155,0.1155,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S07_0720,S7_S07_F3,Vertebrate,Hair,1.3,1.4108,0.1108,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S07_0720,S7_S07_F4,Anthropogenic,Wax Paper,1.3,1.4548,0.1548,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S07_0720,S7_S07_F5,Anthropogenic,Paper Napkin,1.3,1.4161,0.1161,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S07_0720,S7_S07_F6,Plant,Seed Casings,1.4,1.442,0.042,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S08_0720,S7_S08_F1,Invertebrate,Arthropod Fragments,1.3,1.4377,0.1377,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S08_0720,S7_S08_F2,Vertebrate,Bone Fragments,1.3,1.7498,0.4498,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S08_0720,S7_S08_F3,Anthropogenic,Paper Napkin,1.3,1.3595,0.0595,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S09_0720,S7_S09_F1,Vertebrate,Hair ,1.3,1.5776,0.2776,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S09_0720,S7_S09_F2,Vertebrate,Bone Fragments,1.3,1.4465,0.1465,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S09_0720,S7_S09_F3,Vertebrate,Teeth,1.3,1.4035,0.1035,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S10_0720,S7_S10_F1,Anthropogenic,Paper Napkin,1.3,1.4532,0.1532,,,,,,,,,,,
+S7,MY_Roadhouse,CA,S7_S10_0720,S7_S10_F2,Vertebrate,Bone Fragments,1.3,1.3333,0.0333,,,,,,,,,,,
