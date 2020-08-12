@@ -1,11 +1,17 @@
 # PROTOCOL FOR: 
 # Tourism impacts on wildlife behavior and health
 
-_Last updated: November 18, 2019_
+_Last updated: August 12, 2020_
 
 ## Authors: 
 
 * Anna Willoughby
+
+## Project Research Assistants
+
+* Zoe Boyles (CURO Summer 2019) 
+* John Mark Simmons (CURO Spring 2019)
+* Caroline Aikens (CURO/ECOL4960R Summer 2020)
 
 ### Background: 
 
@@ -23,18 +29,37 @@ Visitors continue to feed park wildlife despite discouraging signage. Supplement
 
 *Behavior studies* 
 
+_Rock Squirrel Studies_
+
+_Ringtail Studies_
+
+
 *Diet studies* 
-Here is specific protocol for hair collection, processing, and analysis.
+[Here] is specific protocol for hair collection, processing, and analysis.
 
 *Condition studies*
 
 *Parasitological studies*
 
+_Field-collected specimens_ 
+
+_Museum specimens_
+
 ### Analysis: 
+*Species identifications*
 
+*Isotope analyses*
 
+*Activity*
+
+*Parasite* 
+
+*Dietary composition*
 
 ### Checklist: 
+
+### Permits
+This work requires sample and specimen collection permits from field sites (NPS, Utah DNR) and museum (NPS, LACM), in addition to animal-use oversight from UGA and NPS. All permit records are stored [here](https://docs.google.com/spreadsheets/d/1pRibmzCBBkdJKFlgX9BHZPBH5-2jjv_UKw48D10KQ38/edit?usp=sharing). 
 
 ### Important background papers: 
 
