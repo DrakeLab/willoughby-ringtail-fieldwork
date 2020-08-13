@@ -23,17 +23,15 @@ data <- read.csv(file = "data/ZNP-2019_Fecal_Fragments.csv") %>%
   filter(Initials != "ZB") # remove Zoe's samples as they were pooled by latrine 
 data <- data[,1:10] # remove extra columns 
 data <- left_join(data, seg_id, by = "Segment")
+data <- left_join(data, l_id, by = "LatrineBag")
 
 # Count how many segments there are per building type 
 
 data %>% 
-  group_by(BuildingUse) %>%
+  group_by(LatrineAreaType) %>%
   summarise(count_segments = n_distinct(segment_id)) 
 
-# There are 67 segments analyses from staff buildings and 47 from the lodge 
-# create simpler seg id 
-
-
+# There are 67 segments analyses from staff buildings and 57 from the lodge 
 
 # create a matrix of segment x diet item 
 diet_asc <- data %>% 
@@ -94,22 +92,27 @@ orditorp(diet_NMDS,display="sites",col = colors, cex=0.6,air=0.01)
 # Using ggplot 
 
 NMDS <- cbind(NMDS, plotted_segments)
-
+write.csv(NMDS, file = "data/diet_NMDS_output.csv")
 xx = ggplot(NMDS, aes(x = MDS1, y = MDS2, col = LatrineAreaType)) + 
-  geom_point(size = 4) +
-  stat_ellipse() +
   theme(axis.text.y = element_text(colour = "black", size = 12, face = "bold"), 
         axis.text.x = element_text(colour = "black", face = "bold", size = 12), 
         legend.text = element_text(size = 12, face ="bold", colour ="black"), 
         legend.position = "right", axis.title.y = element_text(face = "bold", size = 14), 
         axis.title.x = element_text(face = "bold", size = 14, colour = "black"), 
         legend.title = element_text(size = 14, colour = "black", face = "bold"), 
-        panel.background = element_blank(), panel.border = element_rect(colour = "black", fill = NA, size = 1.2),
-        legend.key=element_blank()) + 
+        plot.background = element_rect(fill = "#d8d8d8ff"),
+        #panel.background = element_rect(fill = "#d8d8d8ff"), panel.border = element_rect(colour = "black",fill = "#d8d8d8ff", size = 1.2),
+        legend.key=element_blank()) +
+  geom_point(size = 4) +
+  stat_ellipse() +
   labs(x = "NMDS1", colour = "Building", y = "NMDS2")  + 
-  scale_colour_manual(values = c("#1D2D44", "#A59132")) 
-
+  scale_colour_manual(values = c("#1D2D44", "#A59132")) + 
+  annotate("text", x = c(-1, 0, 0.5, 1), y = c(-0.25, 0.75, -1, 0.4), 
+           label = c("Vertebrate","Invertebrate", "Anthropogenic", "Plant"), 
+           colour = c("#800000", "#800000", "#800000", "#800000"), 
+           size = c(12, 12, 12, 12))
 xx
+ggsave("figures/diet_NMDS.png")
 
 # now we want to do some statistics 
 
