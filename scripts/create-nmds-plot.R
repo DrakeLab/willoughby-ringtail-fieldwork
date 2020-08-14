@@ -33,14 +33,22 @@ data %>%
 
 # There are 67 segments analyses from staff buildings and 57 from the lodge 
 
-# create a matrix of segment x diet item 
-diet_asc <- data %>% 
-  select(segment_id, FragmentType, DriedFragmentWeight)
+# create a edge list of segment x diet item including segment and fragment weights
+
 seg_id <- segments %>% 
   select(segment_id,, dry_weight_g)
-diet_asc <- left_join(diet_asc, seg_id, by = "segment_id") %>%
+diet_asc <- left_join(data, seg_id, by = "segment_id") %>%
   filter(dry_weight_g != "") # filtering out incomplete segments for now 
-diet_asc$relative_weight <- diet_asc$DriedFragmentWeight / diet_asc$dry_weight_g
+
+# calculate relative frequency by weight
+diet_asc$relative_weight <- diet_asc$DriedFragmentWeight / diet_asc$dry_weight_g 
+
+# columns needed latrine 
+diet_asc <- diet_asc %>% 
+  select(LatrineAreaType, Latrine, segment_id, FragmentType, DriedFragmentWeight, dry_weight_g, relative_weight) # you have multiple vertebrates 
+write.csv(diet_asc, file = "data/latrine-fragment-data.csv")
+
+# columnes needed for NMDS analyses
 diet_asc <- diet_asc %>% select(segment_id, FragmentType, relative_weight) # you have multiple vertebrates 
 
 
