@@ -48,7 +48,55 @@ diet_asc <- diet_asc %>%
   select(LatrineAreaType, Latrine, segment_id, FragmentType, DriedFragmentWeight, dry_weight_g, relative_weight) # you have multiple vertebrates 
 write.csv(diet_asc, file = "data/latrine-fragment-data.csv")
 
-# columnes needed for NMDS analyses
+# sum to the so segment-fragment type is unique
+
+segment_level <- diet_asc %>% 
+  group_by(as.factor(segment_id), as.factor(FragmentType), .drop = FALSE) %>% 
+  summarise(fragment_weight = sum(DriedFragmentWeight),
+            segment_weight = mean(dry_weight_g)) 
+# replace NaN with missing value (NA) 
+segment_level$segment_weight <- ifelse(segment_level$segment_weight == "NaN", NA, segment_level$segment_weight)
+
+segment_level <- segment_level %>%
+  fill(segment_weight, .direction = "downup")
+
+# merge in Latrine information
+
+latrine_segment <- left_join(segments, l_id, by = "LatrineBag") %>% 
+  select(Latrine,color, segment_id, LatrineAreaType)
+
+segment_level <- left_join(segment_level, latrine_segment, by = c("as.factor(segment_id)" = "segment_id"))
+
+# sum to the so latrine-fragment type is unique
+latrine_level <- segment_level %>% 
+  group_by(LatrineAreaType, color, Latrine, `as.factor(FragmentType)`) %>% 
+  summarise(fragment_weight = sum(fragment_weight),
+            latrine_weight = sum(segment_weight))
+
+# calculate relative weight of the latrine (eg pooled 10 scat samples)
+latrine_level$relative_weight <- latrine_level$fragment_weight / latrine_level$latrine_weight
+
+# remove contaminant and organic to reduce clutter 
+latrine_level <- dplyr::filter(latrine_level, `as.factor(FragmentType)` %notin% c("Contaminant", "Organic"))
+
+ggplot(latrine_level, aes(y = relative_weight, x = `as.factor(FragmentType)`, fill = LatrineAreaType)) + 
+  geom_boxplot(outlier.shape = NA) + 
+  geom_jitter(position=position_jitterdodge()) +
+  theme(axis.text.y = element_text(colour = "black", size = 10), 
+        axis.text.x = element_text(colour = "black", size = 10), 
+        legend.text = element_text(size = 12, colour ="black"), 
+        legend.position = "right", axis.title.y = element_text(face = "bold", size = 14), 
+        axis.title.x = element_text(face = "bold", size = 14, colour = "black"), 
+        legend.title = element_text(size = 14, colour = "black", face = "bold"), 
+        plot.background = element_rect(fill = "#d8d8d8ff"),
+        legend.key=element_blank()) + 
+  labs(x = "Diet Category", colour = "Building", y = "relative frequency by weight")  + 
+  scale_fill_manual(values =  c("#1D2D44", "#A59132",
+                                 "#1D2D44", "#A59132", 
+                                 "#1D2D44", "#A59132", 
+                                 "#1D2D44", "#A59132", 
+                                 "#1D2D44", "#A59132"))
+# columns needed for NMDS analyses
 diet_asc <- diet_asc %>% select(segment_id, FragmentType, relative_weight) # you have multiple vertebrates 
 
 
