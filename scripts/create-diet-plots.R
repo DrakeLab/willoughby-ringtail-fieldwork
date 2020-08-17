@@ -79,7 +79,7 @@ latrine_level$relative_weight <- latrine_level$fragment_weight / latrine_level$l
 # remove contaminant and organic to reduce clutter 
 latrine_level <- dplyr::filter(latrine_level, `as.factor(FragmentType)` %notin% c("Contaminant", "Organic"))
 
-ggplot(latrine_level, aes(y = relative_weight, x = `as.factor(FragmentType)`, fill = LatrineAreaType)) + 
+x1 <- ggplot(latrine_level, aes(y = relative_weight, x = `as.factor(FragmentType)`, fill = LatrineAreaType)) + 
   geom_boxplot(outlier.shape = NA) + 
   geom_jitter(position=position_jitterdodge()) +
   theme(axis.text.y = element_text(colour = "black", size = 10), 
@@ -96,6 +96,9 @@ ggplot(latrine_level, aes(y = relative_weight, x = `as.factor(FragmentType)`, fi
                                  "#1D2D44", "#A59132", 
                                  "#1D2D44", "#A59132", 
                                  "#1D2D44", "#A59132"))
+x1
+ggsave("figures/diet_latrine-boxplot.png") 
+
 # columns needed for NMDS analyses
 diet_asc <- diet_asc %>% select(segment_id, FragmentType, relative_weight) # you have multiple vertebrates 
 
