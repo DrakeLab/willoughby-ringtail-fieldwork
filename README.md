@@ -1,7 +1,7 @@
 # PROTOCOL FOR: 
 # Tourism impacts on wildlife behavior and health
 
-_Last updated: August 12, 2020_
+_Last updated: February 15, 2021_
 
 ## Authors: 
 
@@ -12,6 +12,7 @@ _Last updated: August 12, 2020_
 * Zoe Boyles (CURO Summer 2019) 
 * John Mark Simmons (CURO Spring 2019)
 * Caroline Aikens (CURO/ECOL4960R Summer 2020)
+* Sydney Speir (CURO/ECOL4960R Spring 2021)
 
 ### Background: 
 
@@ -22,22 +23,14 @@ Visitors continue to feed park wildlife despite discouraging signage. Supplement
 ### Research questions:
 1. How do visitor-provided resources affect wildlife behavior? 
 2. How do visitor-provided resources affect wildlife diet? 
-3. How do visitor-provided resources affect wildlife condition (e.g. immunity)? 
-4. How do visitor-provided resources affect wildlife infection status and parasites? 
+3. How do visitor-provided resources affect wildlife infection status and parasites? 
 
 ### Study design: 
-
-*Behavior studies* 
-
-_Rock Squirrel Studies_
-
-_Ringtail Studies_
-
 
 *Diet studies* 
 [Here] is specific protocol for hair collection, processing, and analysis.
 
-*Condition studies*
+*Beahviorstudies*
 
 *Parasitological studies*
 
