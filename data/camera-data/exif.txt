@@ -1,0 +1,389 @@
+======== 01040001.JPG
+ExifTool Version Number         : 12.16
+File Name                       : 01040001.JPG
+Directory                       : .
+File Size                       : 620 KiB
+File Modification Date/Time     : 2021:01:04 14:59:58-05:00
+File Access Date/Time           : 2021:11:03 15:43:05-04:00
+File Inode Change Date/Time     : 2021:11:01 18:13:11-04:00
+File Permissions                : rwxrwxrwx
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+Exif Byte Order                 : Little-endian (Intel, II)
+Image Description               : M2E128A62L3-0.0-0.0
+Make                            : BUSHNELL
+Camera Model Name               : 
+Orientation                     : Horizontal (normal)
+X Resolution                    : 72
+Y Resolution                    : 72
+Resolution Unit                 : inches
+Software                        : BS686BWNx14239
+Modify Date                     : 2021:01:04 09:59:57
+Y Cb Cr Positioning             : Co-sited
+Exposure Time                   : 1
+F Number                        : 2.8
+Exposure Program                : Program AE
+ISO                             : 50
+Exif Version                    : 0220
+Date/Time Original              : 2021:01:04 09:59:57
+Create Date                     : 2021:01:04 09:59:57
+Components Configuration        : Y, Cb, Cr, -
+Compressed Bits Per Pixel       : undef
+Shutter Speed Value             : 1
+Aperture Value                  : 2.8
+Exposure Compensation           : 0
+Max Aperture Value              : 2.8
+Metering Mode                   : Multi-spot
+Light Source                    : Unknown
+Flash                           : Off, Did not fire
+Focal Length                    : 0.0 mm
+Warning                         : [minor] Unrecognized MakerNotes
+User Comment                    : 
+Flashpix Version                : 0100
+Color Space                     : sRGB
+Exif Image Width                : 1920
+Exif Image Height               : 1440
+Interoperability Index          : R98 - DCF basic file (sRGB)
+Interoperability Version        : 0100
+File Source                     : Digital Camera
+Scene Type                      : Directly photographed
+Exposure Mode                   : Auto
+White Balance                   : Auto
+Digital Zoom Ratio              : 1000
+Focal Length In 35mm Format     : 0 mm
+Scene Capture Type              : Standard
+Sharpness                       : Soft
+GPS Altitude                    : 3 m
+GPS Speed                       : 50
+GPS Img Direction               : 1
+Compression                     : JPEG (old-style)
+Orientation                     : Horizontal (normal)
+X Resolution                    : 96
+Y Resolution                    : 96
+Resolution Unit                 : inches
+Thumbnail Offset                : 42686
+Thumbnail Length                : 7720
+Y Cb Cr Positioning             : Co-sited
+MPF Version                     : 0100
+Number Of Images                : 2
+MP Image Flags                  : Representative image, Dependent parent image
+MP Image Format                 : JPEG
+MP Image Type                   : Baseline MP Primary Image
+MP Image Length                 : 526673
+MP Image Start                  : 0
+Dependent Image 1 Entry Number  : 2
+Dependent Image 2 Entry Number  : 0
+MP Image Flags                  : Dependent child image
+MP Image Format                 : JPEG
+MP Image Type                   : Large Thumbnail (VGA equivalent)
+MP Image Length                 : 108368
+MP Image Start                  : 526673
+Dependent Image 1 Entry Number  : 0
+Dependent Image 2 Entry Number  : 0
+Image Width                     : 1920
+Image Height                    : 1440
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:2 (2 1)
+Aperture                        : 2.8
+Image Size                      : 1920x1440
+Megapixels                      : 2.8
+Shutter Speed                   : 1
+Thumbnail Image                 : (Binary data 7720 bytes, use -b option to extract)
+Preview Image                   : (Binary data 108368 bytes, use -b option to extract)
+Focal Length                    : 0.0 mm
+Light Value                     : 4.0
+======== 01040002.JPG
+ExifTool Version Number         : 12.16
+File Name                       : 01040002.JPG
+Directory                       : .
+File Size                       : 643 KiB
+File Modification Date/Time     : 2021:01:04 14:59:58-05:00
+File Access Date/Time           : 2021:11:03 15:43:05-04:00
+File Inode Change Date/Time     : 2021:08:19 10:50:12-04:00
+File Permissions                : rwxrwxrwx
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+Exif Byte Order                 : Little-endian (Intel, II)
+Image Description               : M2E128A62L3-0.0-0.0
+Make                            : BUSHNELL
+Camera Model Name               : 
+Orientation                     : Horizontal (normal)
+X Resolution                    : 72
+Y Resolution                    : 72
+Resolution Unit                 : inches
+Software                        : BS686BWNx14239
+Modify Date                     : 2021:01:04 09:59:58
+Y Cb Cr Positioning             : Co-sited
+Exposure Time                   : 1
+F Number                        : 2.8
+Exposure Program                : Program AE
+ISO                             : 50
+Exif Version                    : 0220
+Date/Time Original              : 2021:01:04 09:59:58
+Create Date                     : 2021:01:04 09:59:58
+Components Configuration        : Y, Cb, Cr, -
+Compressed Bits Per Pixel       : undef
+Shutter Speed Value             : 1
+Aperture Value                  : 2.8
+Exposure Compensation           : 0
+Max Aperture Value              : 2.8
+Metering Mode                   : Multi-spot
+Light Source                    : Unknown
+Flash                           : Off, Did not fire
+Focal Length                    : 0.0 mm
+Warning                         : [minor] Unrecognized MakerNotes
+User Comment                    : 
+Flashpix Version                : 0100
+Color Space                     : sRGB
+Exif Image Width                : 1920
+Exif Image Height               : 1440
+Interoperability Index          : R98 - DCF basic file (sRGB)
+Interoperability Version        : 0100
+File Source                     : Digital Camera
+Scene Type                      : Directly photographed
+Exposure Mode                   : Auto
+White Balance                   : Auto
+Digital Zoom Ratio              : 1000
+Focal Length In 35mm Format     : 0 mm
+Scene Capture Type              : Standard
+Sharpness                       : Soft
+GPS Altitude                    : 3 m
+GPS Speed                       : 50
+GPS Img Direction               : 1
+Compression                     : JPEG (old-style)
+Orientation                     : Horizontal (normal)
+X Resolution                    : 96
+Y Resolution                    : 96
+Resolution Unit                 : inches
+Thumbnail Offset                : 42686
+Thumbnail Length                : 7747
+Y Cb Cr Positioning             : Co-sited
+MPF Version                     : 0100
+Number Of Images                : 2
+MP Image Flags                  : Representative image, Dependent parent image
+MP Image Format                 : JPEG
+MP Image Type                   : Baseline MP Primary Image
+MP Image Length                 : 547074
+MP Image Start                  : 0
+Dependent Image 1 Entry Number  : 2
+Dependent Image 2 Entry Number  : 0
+MP Image Flags                  : Dependent child image
+MP Image Format                 : JPEG
+MP Image Type                   : Large Thumbnail (VGA equivalent)
+MP Image Length                 : 111190
+MP Image Start                  : 547074
+Dependent Image 1 Entry Number  : 0
+Dependent Image 2 Entry Number  : 0
+Image Width                     : 1920
+Image Height                    : 1440
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:2 (2 1)
+Aperture                        : 2.8
+Image Size                      : 1920x1440
+Megapixels                      : 2.8
+Shutter Speed                   : 1
+Thumbnail Image                 : (Binary data 7747 bytes, use -b option to extract)
+Preview Image                   : (Binary data 111190 bytes, use -b option to extract)
+Focal Length                    : 0.0 mm
+Light Value                     : 4.0
+======== 01190003.JPG
+ExifTool Version Number         : 12.16
+File Name                       : 01190003.JPG
+Directory                       : .
+File Size                       : 244 KiB
+File Modification Date/Time     : 2021:01:19 19:41:32-05:00
+File Access Date/Time           : 2021:11:03 15:43:05-04:00
+File Inode Change Date/Time     : 2021:08:19 10:50:11-04:00
+File Permissions                : rwxrwxrwx
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+Exif Byte Order                 : Little-endian (Intel, II)
+Image Description               : M2E104A1L145-0.0-0.0
+Make                            : BUSHNELL
+Camera Model Name               : 
+Orientation                     : Horizontal (normal)
+X Resolution                    : 72
+Y Resolution                    : 72
+Resolution Unit                 : inches
+Software                        : BS686BWNx14239
+Modify Date                     : 2021:01:19 14:41:31
+Y Cb Cr Positioning             : Co-sited
+Exposure Time                   : 1
+F Number                        : 2.8
+Exposure Program                : Program AE
+ISO                             : 50
+Exif Version                    : 0220
+Date/Time Original              : 2021:01:19 14:41:31
+Create Date                     : 2021:01:19 14:41:31
+Components Configuration        : Y, Cb, Cr, -
+Compressed Bits Per Pixel       : undef
+Shutter Speed Value             : 1
+Aperture Value                  : 2.8
+Exposure Compensation           : 0
+Max Aperture Value              : 2.8
+Metering Mode                   : Multi-spot
+Light Source                    : Unknown
+Flash                           : Off, Did not fire
+Focal Length                    : 0.0 mm
+Warning                         : [minor] Unrecognized MakerNotes
+User Comment                    : 
+Flashpix Version                : 0100
+Color Space                     : sRGB
+Exif Image Width                : 1920
+Exif Image Height               : 1440
+Interoperability Index          : R98 - DCF basic file (sRGB)
+Interoperability Version        : 0100
+File Source                     : Digital Camera
+Scene Type                      : Directly photographed
+Exposure Mode                   : Auto
+White Balance                   : Auto
+Digital Zoom Ratio              : 1000
+Focal Length In 35mm Format     : 0 mm
+Scene Capture Type              : Standard
+Sharpness                       : Soft
+GPS Altitude                    : 145 m
+GPS Speed                       : 2325
+GPS Img Direction               : 1
+Compression                     : JPEG (old-style)
+Orientation                     : Horizontal (normal)
+X Resolution                    : 96
+Y Resolution                    : 96
+Resolution Unit                 : inches
+Thumbnail Offset                : 42686
+Thumbnail Length                : 2300
+Y Cb Cr Positioning             : Co-sited
+MPF Version                     : 0100
+Number Of Images                : 2
+MP Image Flags                  : Representative image, Dependent parent image
+MP Image Format                 : JPEG
+MP Image Type                   : Baseline MP Primary Image
+MP Image Length                 : 201269
+MP Image Start                  : 0
+Dependent Image 1 Entry Number  : 2
+Dependent Image 2 Entry Number  : 0
+MP Image Flags                  : Dependent child image
+MP Image Format                 : JPEG
+MP Image Type                   : Large Thumbnail (VGA equivalent)
+MP Image Length                 : 48092
+MP Image Start                  : 201269
+Dependent Image 1 Entry Number  : 0
+Dependent Image 2 Entry Number  : 0
+Image Width                     : 1920
+Image Height                    : 1440
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:2 (2 1)
+Aperture                        : 2.8
+Image Size                      : 1920x1440
+Megapixels                      : 2.8
+Shutter Speed                   : 1
+Thumbnail Image                 : (Binary data 2300 bytes, use -b option to extract)
+Preview Image                   : (Binary data 48092 bytes, use -b option to extract)
+Focal Length                    : 0.0 mm
+Light Value                     : 4.0
+======== 01190004.JPG
+ExifTool Version Number         : 12.16
+File Name                       : 01190004.JPG
+Directory                       : .
+File Size                       : 223 KiB
+File Modification Date/Time     : 2021:01:19 19:41:32-05:00
+File Access Date/Time           : 2021:11:03 15:43:13-04:00
+File Inode Change Date/Time     : 2021:08:19 10:50:11-04:00
+File Permissions                : rwxrwxrwx
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+Exif Byte Order                 : Little-endian (Intel, II)
+Image Description               : M2E104A1L145-0.0-0.0
+Make                            : BUSHNELL
+Camera Model Name               : 
+Orientation                     : Horizontal (normal)
+X Resolution                    : 72
+Y Resolution                    : 72
+Resolution Unit                 : inches
+Software                        : BS686BWNx14239
+Modify Date                     : 2021:01:19 14:41:31
+Y Cb Cr Positioning             : Co-sited
+Exposure Time                   : 1
+F Number                        : 2.8
+Exposure Program                : Program AE
+ISO                             : 50
+Exif Version                    : 0220
+Date/Time Original              : 2021:01:19 14:41:31
+Create Date                     : 2021:01:19 14:41:31
+Components Configuration        : Y, Cb, Cr, -
+Compressed Bits Per Pixel       : undef
+Shutter Speed Value             : 1
+Aperture Value                  : 2.8
+Exposure Compensation           : 0
+Max Aperture Value              : 2.8
+Metering Mode                   : Multi-spot
+Light Source                    : Unknown
+Flash                           : Off, Did not fire
+Focal Length                    : 0.0 mm
+Warning                         : [minor] Unrecognized MakerNotes
+User Comment                    : 
+Flashpix Version                : 0100
+Color Space                     : sRGB
+Exif Image Width                : 1920
+Exif Image Height               : 1440
+Interoperability Index          : R98 - DCF basic file (sRGB)
+Interoperability Version        : 0100
+File Source                     : Digital Camera
+Scene Type                      : Directly photographed
+Exposure Mode                   : Auto
+White Balance                   : Auto
+Digital Zoom Ratio              : 1000
+Focal Length In 35mm Format     : 0 mm
+Scene Capture Type              : Standard
+Sharpness                       : Soft
+GPS Altitude                    : 145 m
+GPS Speed                       : 2325
+GPS Img Direction               : 1
+Compression                     : JPEG (old-style)
+Orientation                     : Horizontal (normal)
+X Resolution                    : 96
+Y Resolution                    : 96
+Resolution Unit                 : inches
+Thumbnail Offset                : 42686
+Thumbnail Length                : 2492
+Y Cb Cr Positioning             : Co-sited
+MPF Version                     : 0100
+Number Of Images                : 2
+MP Image Flags                  : Representative image, Dependent parent image
+MP Image Format                 : JPEG
+MP Image Type                   : Baseline MP Primary Image
+MP Image Length                 : 186370
+MP Image Start                  : 0
+Dependent Image 1 Entry Number  : 2
+Dependent Image 2 Entry Number  : 0
+MP Image Flags                  : Dependent child image
+MP Image Format                 : JPEG
+MP Image Type                   : Large Thumbnail (VGA equivalent)
+MP Image Length                 : 41735
+MP Image Start                  : 186370
+Dependent Image 1 Entry Number  : 0
+Dependent Image 2 Entry Number  : 0
+Image Width                     : 1920
+Image Height                    : 1440
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:2 (2 1)
+Aperture                        : 2.8
+Image Size                      : 1920x1440
+Megapixels                      : 2.8
+Shutter Speed                   : 1
+Thumbnail Image                 : (Binary data 2492 bytes, use -b option to extract)
+Preview Image                   : (Binary data 41735 bytes, use -b option to extract)
+Focal Length                    : 0.0 mm
+Light Value                     : 4.0
+    4 image files read
