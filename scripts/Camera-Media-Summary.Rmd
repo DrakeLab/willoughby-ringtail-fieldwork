@@ -7,21 +7,42 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyr)
+library(dplyr)
 ```
 
-## Camera Method Summary 
+# Status of Canyon Critters Camera Media
 
+Report date: `Sys.Date()`
 
-```{r setup}
+## Camera Method Summary
+
+<!-- Should this be a separate paragraph/section from the one about maintenance? Or is this just a placeholder heading? -->
+
+```{r data, include=FALSE, echo=FALSE}
+days <- read.csv(file = "willoughby-ringtail-fieldwork/data/camera-data/camera_days.csv")
+events <- read.csv(file = "willoughby-ringtail-fieldwork/data/camera-data/check_event.csv")
+detection <- read.csv(file = "willoughby-ringtail-fieldwork/data/camera-data/detection_info.csv")
+
+deploy_date <- days %>%
+  filter(days_since_deployment = 0) %>%
+  select(site_id, date, trap_day) %>%
+  arrange(date)
 
 ```
 
-## Including Plots
+## Study Design and Maintenance
 
-You can also embed plots, for example:
+From STARTDATE, cameras were deployed at NUMBER sites for a total of NUMBER camera days. NUMBER (PERCENT) cameras are located at natural sites and NUMBER (PERCENT) are located at building sites. The cameras were functional for NUMBER days, PERCENT of the study period. Camera function was interrupted when a camera had a full SD card (NUMBER OF DAYS [PERCENT]), a dead battery (NUMBER OF DAYS [PERCENT]), or the camera being misplaced (NUMBER OF DAYS [PERCENT]).
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+Camera data is collected periodically in check events. Across all sites, camera data has been collected NUMBERCHECKEVENTS times. Each check event covers an average of NUMBER camera days, with an average of NUMBER (PERCENT) functional camera days.
+
+Across all sites, cameras captured NUMBER trigger events, of which NUMBER (PERCENT) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured NUMBER trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured NUMBER trigger events, covering DURATION.
+
+```{r maintenancegraphs, include=TRUE}
+# graphs
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Data Storage and Status
+
+Camera data is stored by check event. Of the NUMBERCHECKEVENT check events, NUMBER (PERCENT) are stored in two physical locations. NUMBER (PERCENT) are uploaded to the Canyon Critters Zooniverse project.
