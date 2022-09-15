@@ -9,6 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyr)
 library(dplyr)
+library(here)
 ```
 
 # Status of Canyon Critters Camera Media
@@ -20,12 +21,12 @@ Report date: `Sys.Date()`
 <!-- Should this be a separate paragraph/section from the one about maintenance? Or is this just a placeholder heading? -->
 
 ```{r data, include=FALSE, echo=FALSE}
-days <- read.csv(file = "willoughby-ringtail-fieldwork/data/camera-data/camera_days.csv")
-events <- read.csv(file = "willoughby-ringtail-fieldwork/data/camera-data/check_event.csv")
-detection <- read.csv(file = "willoughby-ringtail-fieldwork/data/camera-data/detection_info.csv")
+days <- read.csv(here(file = "data/camera-data/camera_days.csv"))
+events <- read.csv(here(file = "data/camera-data/check_event.csv"))
+detection <- read.csv(here(file = "data/camera-data/detection_info.csv"))
 
 deploy_date <- days %>%
-  filter(days_since_deployment = 0) %>%
+  filter(days_since_deployment == 0) %>%
   select(site_id, date, trap_day) %>%
   arrange(date)
 
