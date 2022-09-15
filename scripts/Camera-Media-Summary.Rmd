@@ -14,7 +14,7 @@ library(here)
 
 # Status of Canyon Critters Camera Media
 
-Report date: `Sys.Date()`
+Report date: `r Sys.Date()`
 
 ## Camera Method Summary
 
@@ -29,12 +29,19 @@ deploy_date <- days %>%
   filter(days_since_deployment == 0) %>%
   select(site_id, date, trap_day) %>%
   arrange(date)
+start_date <- deploy_date %>%
+  filter(date == min(deploy_date$date)) %>% select(date)
+
+# might be better to use a different df as the base for this for future analysis using these variables -- the check event csv doesn't have site ids at the moment though
+sites <- days %>% 
+  select(site_id) %>%
+  distinct(.keep_all = TRUE)
 
 ```
 
 ## Study Design and Maintenance
 
-From STARTDATE, cameras were deployed at NUMBER sites for a total of NUMBER camera days. NUMBER (PERCENT) cameras are located at natural sites and NUMBER (PERCENT) are located at building sites. The cameras were functional for NUMBER days, PERCENT of the study period. Camera function was interrupted when a camera had a full SD card (NUMBER OF DAYS [PERCENT]), a dead battery (NUMBER OF DAYS [PERCENT]), or the camera being misplaced (NUMBER OF DAYS [PERCENT]).
+From `r start_date`, cameras were deployed at `r nrow(sites)` sites for a total of NUMBER camera days. NUMBER (PERCENT) cameras are located at natural sites and NUMBER (PERCENT) are located at building sites. The cameras were functional for NUMBER days, PERCENT of the study period. Camera function was interrupted when a camera had a full SD card (NUMBER OF DAYS [PERCENT]), a dead battery (NUMBER OF DAYS [PERCENT]), or the camera being misplaced (NUMBER OF DAYS [PERCENT]).
 
 Camera data is collected periodically in check events. Across all sites, camera data has been collected NUMBERCHECKEVENTS times. Each check event covers an average of NUMBER camera days, with an average of NUMBER (PERCENT) functional camera days.
 
