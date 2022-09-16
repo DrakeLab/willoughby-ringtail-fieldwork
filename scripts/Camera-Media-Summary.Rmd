@@ -24,6 +24,7 @@ Report date: `r Sys.Date()`
 days <- read.csv(here(file = "data/camera-data/camera_days.csv"))
 events <- read.csv(here(file = "data/camera-data/check_event.csv"))
 detection <- read.csv(here(file = "data/camera-data/detection_info.csv"))
+sites <- read.csv(here(file = "data/camera-data/site_info.csv"))
 
 deploy_date <- days %>%
   filter(days_since_deployment == 0) %>%
@@ -32,16 +33,29 @@ deploy_date <- days %>%
 start_date <- deploy_date %>%
   filter(date == min(deploy_date$date)) %>% select(date)
 
-# might be better to use a different df as the base for this for future analysis using these variables -- the check event csv doesn't have site ids at the moment though
-sites <- days %>% 
-  select(site_id) %>%
-  distinct(.keep_all = TRUE)
+site_list <- sites %>% 
+  filter(SiteNumber != "PilotSite") %>%
+  filter (SiteNumber != "DuplicateSite") %>%
+  select(SiteID, SiteType)
+count_natural <- site_list %>%
+  filter(SiteType == "outdoor") %>%
+  nrow()
+prop_natural <- count_natural %>%
+  nrow()/nrow(site_list)*100
+count_building <- site_list %>%
+  filter(SiteType == "building") %>%
+  nrow()
+prop_building <- count_building %>%
+  nrow()/nrow(site_list)*100
+
+days_count <- days %>%
+  filter(status != "Not Yet Deployed")
 
 ```
 
 ## Study Design and Maintenance
 
-From `r start_date`, cameras were deployed at `r nrow(sites)` sites for a total of NUMBER camera days. NUMBER (PERCENT) cameras are located at natural sites and NUMBER (PERCENT) are located at building sites. The cameras were functional for NUMBER days, PERCENT of the study period. Camera function was interrupted when a camera had a full SD card (NUMBER OF DAYS [PERCENT]), a dead battery (NUMBER OF DAYS [PERCENT]), or the camera being misplaced (NUMBER OF DAYS [PERCENT]).
+From `r start_date`, cameras were deployed at `r nrow(site_list)` sites for a total of `r nrow(days_count)` camera days. `r count_natural` (`r prop_natural`%) cameras are located at natural sites and `r count_building` (`r prop_building`%) are located at building sites. The cameras were functional for NUMBER days, PERCENT of the study period. Camera function was interrupted when a camera had a full SD card (NUMBER OF DAYS [PERCENT]), a dead battery (NUMBER OF DAYS [PERCENT]), or the camera being misplaced (NUMBER OF DAYS [PERCENT]).
 
 Camera data is collected periodically in check events. Across all sites, camera data has been collected NUMBERCHECKEVENTS times. Each check event covers an average of NUMBER camera days, with an average of NUMBER (PERCENT) functional camera days.
 
