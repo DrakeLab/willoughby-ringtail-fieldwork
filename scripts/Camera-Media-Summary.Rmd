@@ -63,6 +63,7 @@ Across all sites, cameras captured NUMBER trigger events, of which NUMBER (PERCE
 
 ```{r maintenancegraphs, include=TRUE}
 # graphs
+# deployment date graph -- pivot the dates
 ```
 
 ## Data Storage and Status
