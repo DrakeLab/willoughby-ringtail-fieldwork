@@ -38,26 +38,42 @@ site_list <- sites %>%
   filter (SiteNumber != "DuplicateSite") %>%
   select(SiteID, SiteType)
 count_natural <- site_list %>%
-  filter(SiteType == "outdoor") %>%
-  nrow()
-prop_natural <- count_natural %>%
-  nrow()/nrow(site_list)*100
+  filter(SiteType == "outdoor")
+prop_natural <- round(nrow(count_natural)/nrow(site_list)*100)
 count_building <- site_list %>%
-  filter(SiteType == "building") %>%
-  nrow()
-prop_building <- count_building %>%
-  nrow()/nrow(site_list)*100
+  filter(SiteType == "building")
+prop_building <- round(nrow(count_building)/nrow(site_list)*100)
 
 days_count <- days %>%
   filter(status != "Not Yet Deployed")
+
+days_functional <- days_count %>%
+  filter(status == "Functional")
+prop_functional <- round(nrow(days_functional)/nrow(days_count)*100,1)
+
+days_sd_full <- days_count %>%
+  filter(status == "Card Full")
+prop_sd_full <- round(nrow(days_sd_full)/nrow(days_count)*100,1)
+
+days_batteries_dead <- days_count %>%
+  filter(status == "Batteries Dead")
+prop_batteries_dead <- round(nrow(days_batteries_dead)/nrow(days_count)*100)
+
+days_dislodged <- days_count %>%
+  filter(status == "Camera Dislodged")
+prop_dislodged <- round(nrow(days_dislodged)/nrow(days_count)*100,1)
+
+# mean_event_duration <- events %>%
+  # mean(Event_Duration_Days)
+  # event duration isn't filled out for these yet, so the function doesn't have any numbers to draw on -- i will address this this week (9/19) when updating MMF
 
 ```
 
 ## Study Design and Maintenance
 
-From `r start_date`, cameras were deployed at `r nrow(site_list)` sites for a total of `r nrow(days_count)` camera days. `r count_natural` (`r prop_natural`%) cameras are located at natural sites and `r count_building` (`r prop_building`%) are located at building sites. The cameras were functional for NUMBER days, PERCENT of the study period. Camera function was interrupted when a camera had a full SD card (NUMBER OF DAYS [PERCENT]), a dead battery (NUMBER OF DAYS [PERCENT]), or the camera being misplaced (NUMBER OF DAYS [PERCENT]).
+From `r start_date`, cameras were deployed at `r nrow(site_list)` sites for a total of `r nrow(days_count)` camera days. `r nrow(count_natural)` (`r prop_natural`%) cameras are located at natural sites and `r nrow(count_building)` (`r prop_building`%) are located at building sites. The cameras were functional for `r nrow(days_functional)` days, `r prop_functional`% of the study period. Camera function was interrupted when a camera had a full SD card (`r nrow(days_sd_full)` days [`r prop_sd_full`%]), a dead battery (`r nrow(days_batteries_dead)` days [`r prop_batteries_dead`%]), or was dislodged or misplaced (`r nrow(days_dislodged)` days [`r prop_dislodged`%]).
 
-Camera data is collected periodically in check events. Across all sites, camera data has been collected NUMBERCHECKEVENTS times. Each check event covers an average of NUMBER camera days, with an average of NUMBER (PERCENT) functional camera days.
+Camera data is collected periodically in check events. Across all sites, camera data has been collected `r nrow(events)` times. Each check event covers an average of NUMBER camera days, with an average of NUMBER (PERCENT) functional camera days.
 
 Across all sites, cameras captured NUMBER trigger events, of which NUMBER (PERCENT) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured NUMBER trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured NUMBER trigger events, covering DURATION.
 
