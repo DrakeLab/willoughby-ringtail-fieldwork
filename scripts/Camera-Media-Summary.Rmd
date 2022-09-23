@@ -65,7 +65,20 @@ prop_dislodged <- round(nrow(days_dislodged)/nrow(days_count)*100,1)
 
 # mean_event_duration <- events %>%
   # mean(Event_Duration_Days)
-  # event duration isn't filled out for these yet, so the function doesn't have any numbers to draw on -- i will address this this week (9/19) when updating MMF
+  # event duration isn't filled out for these yet, so the function doesn't have any numbers to draw on until that's updated
+
+count_triggers_total <- sum(events$n_TriggerEvents, na.rm = TRUE)
+
+backup <- events %>%
+  filter(In_Two_Locations == "Yes") %>%
+  nrow()
+count_events <- nrow(events)
+prop_backup <- round(backup/count_events*100,1)
+
+upload <- events %>%
+  filter(Uploaded_Zooniverse == "Yes") %>%
+  nrow()
+prop_upload <- round(upload/count_events*100,1)
 
 ```
 
@@ -75,13 +88,18 @@ From `r start_date`, cameras were deployed at `r nrow(site_list)` sites for a to
 
 Camera data is collected periodically in check events. Across all sites, camera data has been collected `r nrow(events)` times. Each check event covers an average of NUMBER camera days, with an average of NUMBER (PERCENT) functional camera days.
 
-Across all sites, cameras captured NUMBER trigger events, of which NUMBER (PERCENT) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured NUMBER trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured NUMBER trigger events, covering DURATION.
+Across all sites, cameras captured `r count_triggers_total` trigger events, of which NUMBER (PERCENT) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured NUMBER trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured NUMBER trigger events, covering DURATION.
 
 ```{r maintenancegraphs, include=TRUE}
 # graphs
 # deployment date graph -- pivot the dates
+deployment_data <- days %>%
+  filter(days_since_deployment != "???") %>% filter(days_since_deployment != "n/a") %>%
+  select(site_id, date, trap_day) %>%
+  arrange(date) %>%
+  pivot_wider(names_from = date, values_from = trap_day)
 ```
 
 ## Data Storage and Status
 
-Camera data is stored by check event. Of the NUMBERCHECKEVENT check events, NUMBER (PERCENT) are stored in two physical locations. NUMBER (PERCENT) are uploaded to the Canyon Critters Zooniverse project.
+Camera data is stored by check event. Of the `r nrow(events)` check events, `r backup` (`r prop_backup`%) are stored in two physical locations. `r upload` (`r prop_upload`%) are uploaded to the Canyon Critters Zooniverse project.
