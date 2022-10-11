@@ -1,0 +1,51 @@
+SiteNumber,SiteID,SiteName,SiteArea,NationalPark,SiteType,StartDay,FunctionalCameraTrapDays,CheckEvent1,CheckEvent2,CheckEvent3,CheckEvent4,CheckEvent5,CheckEvent6,CheckEvent7
+1,MY1,Delivery ,Maintenance Yard,Zion,building,2020-11-05,,MY1_05Nov2020,MY1_07Dec2020,MY1_19Jan2021,MY1_17Feb2021,**MY1_16March2021,MY1_13July2021,
+2,MY2,Showers ,Maintenance Yard,Zion,building,2020-11-05,,MY2_05Nov2020,MY2_07Dec2020,MY2_20Jan2021,MY2_17Feb2021,**MY2_16March2021,**MY2_29June2021,
+3,MY3,Sign Shop,Maintenance Yard,Zion,building,2020-11-11,,MY3_11Nov2020,MY3_07Dec2020,MY3_20Jan2021,MY3_17Feb2021,**MY3_16March2021,**MY3_29June2021,**MY3_05Oct2021
+4,MY4,Roadhouse,Maintenance Yard,Zion,building,2020-11-11,,MY4_11Nov2020,MY4_07Dec2020,MY4_20Jan2021,MY4_17Feb2021,**MY4_16March2021,MY4_13July2021,
+5,MY5,Electrician's Office,Maintenance Yard,Zion,building,2020-11-05,,MY5_05Nov2020,MY5_07Dec2020,MY5_19Jan2021,MY5_17Feb2021,**MY5_16March2021,MY5_13July2021,
+6,MY6,Carpentry Shop,Maintenance Yard,Zion,building,2020-11-11,,MY6_11Nov2020,MY6_07Dec2021,MY6_19Jan2021,MY6_17Feb2021,**MY6_16March2021,**MY6_29June2021,**MY6_05Oct2021
+7,ZL1,FrontDesk,Lodge,Zion,building,2020-11-04,,ZL1_04Nov2020,ZL1_10Dec2020,ZL1_19Jan2021,ZL1_16Feb2021,ZL1_10May2021,ZL1_02Aug2021,ZL1_11Nov2021
+8,ZL2,Giftshop,Lodge,Zion,building,2020-11-04,,ZL2_04Nov2020,ZL2_10Dec2020,ZL2_19Jan2021,ZL2_16Feb2021,ZL2_10May2021,ZL2_02Aug2021,ZL2_11Nov2021
+9,ZL3,Server Station,Lodge,Zion,building,2020-11-04,,ZL3_04Nov2020,ZL3_10Dec2020,ZL3_19Jan2021,ZL3_16Feb2021,**ZL3_10May2021,ZL3_02Aug2021,ZL3_11Nov2021
+10,ZL9,Vending Machine,Lodge,Zion,building,2021-01-19,,ZL9_19Jan2021,ZL9_16Feb2021,ZL9_May2021,ZL9_02Aug2021,ZL9_11Nov2021,,
+11,ZL10,Hotel B,Lodge,Zion,building,2021-05-10,,ZL10_10May2021,ZL10_02Aug2021,ZL10_11Nov2021,,,,
+12,ZL6,Dungeon,Lodge,Zion,building,2020-11-03,,ZL6_03Nov2020,ZL6_10Dec2020,ZL6_19Jan2021,ZL6_16Feb2021,ZL6_10May2021,ZL6_02Aug2021,
+13,EC1,Trail ,Maintenance Yard,Zion,outdoor,2020-11-07,,EC1_07Nov2020,EC1_20Dec2020,EC1_19Jan2021,EC1_17Feb2021,EC1_18May2021,EC1_02Aug2021,
+14,EC2,Campground ,Maintenance Yard,Zion,outdoor,2020-11-07,,EC2_07Nov2020,EC2_20Dec2020,EC2_19Jan2021,EC2_17Feb2021,EC2_18May2021,EC2_02Aug2021,**EC2_14March2021
+15,DZ,DeZion Gallery,Maintenance Yard,Zion,outdoor,2020-11-13,,DZ1_13Nov2020,DZ1_16Dec2020,DZ1_20Jan2021,DZ_17Feb2021,**DZ_14July2021,**DZ_02Oct2021,
+16,WH,Willamarie's House,Maintenance Yard,Zion,outdoor,2020-11-13,,WH1_13Nov2020,WH1_16Dec2020,WH1_20Jan2021,WH1_17Feb2021,,,
+17,LH,Lisa's House,Maintenance Yard,Zion,outdoor,2020-10-22,,LH_22Oct2020,LH_16Dec2020,LH_20Jan2021,LH_17Feb2021,,LH_23Sep2021,
+18,OC,Oak Creek Campground 2 ,Maintenance Yard,Zion,outdoor,2020-11-14,,OC_14Nov2020,OC_20Dec2020,OC_20Jan2021,OC_16Feb2021,,,OC_04Oct2021
+19,RWH,Latrine Hill above handicap sighn,Lodge,Zion,outdoor,2020-10-25,,RW_NL4_25Oct2020,RWHill_20Dec2020,RWHill_20Jan2021,RWHill_16Feb2021,,**RWH_22July2021,RWH_01Oct2021
+20,RWP,Pipe Railing,Lodge,Zion,outdoor,2020-10-25,,RW_NL1_25Oct2020,RWPipe_20Dec2020,RWPipe_20Jan2021,,,**RWP_22July2021,RWP_02Oct2021
+21,PC1,Pine Creek ,Lodge,Zion,outdoor,2021-01-20,,,,PC1_20Jan2021,PC1_16Feb2021,PC_June2021,PC1_02Aug2021,PC1_04Oct2021
+22,HQW,Headquarter's Wash ,Lodge,Zion,outdoor,,,HQW_15Nov2020,HQW_7Dec2020,HQW_20Jan2021,HQW_16Feb2021,,,ZHQ_04Oct2021
+23,SGP,St. George Park ,Lodge,Zion,outdoor,2021-07-07,,SGP_July2020,SGP_07Oct2021,,,,,
+24,KC09,Kolob Canyons ,Lodge,Zion,outdoor,,,KC06_13July2021,,,,,,
+25,GCETRO,Room,South Rim,Grand Canyon,building,2021-06-02,,GCET1_02June2021,,,,,,
+26,GCETCR,Canyon Room,South Rim,Grand Canyon,building,2021-06-02,,GCET2_02June2021,,,,,,
+27,GCBAR,Bright Angel Roof,South Rim,Grand Canyon,building,2021-06-02,,GCBAR_02June2021,GCBAR_13Sep2021,,,,,
+28,GCYL,Yavapai Lodge,South Rim,Grand Canyon,building,2021-06-03,,GCYL_03June2021,GCYL_10Sep2021,,,,,
+29,GCTL,Thunderbird Crawl Space,South Rim,Grand Canyon,building,2021-09-14,,GCET3_02June2021,,,,,,
+30,GCNRL,Lodge,North Rim,Grand Canyon,building,2021-06-08,,NRLB_8June2021,NRL_30June2021,**GCNRL_17Sep2021,,,,
+31,GCBH,Bunkhouse,Inner Canyon,Grand Canyon,building,2021-05-06,,GCBH_06May2021,GCBH_June2021,GCBH_12Sep2021,,,,
+32,GCJH,Jerome's House,Inner Canyon,Grand Canyon,building,2021-05-06,,GCJH_06May2021,GCJH_Jun2021,GCJH_12Sep2021,,,,
+33,GC15H,1.5 House,South Rim,Grand Canyon,outdoor,2021-06-05,,GC15_Jun2021,GC15_25July2021,GC15_11Sep2021,,,,
+34,GCC,Clinic ,South Rim,Grand Canyon,outdoor,2021-06-03,,GCC_03June2021,GCC_25July2021,GCC_10Sep2021,,,,
+35,GCRT,Rim Trail ,South Rim,Grand Canyon,outdoor,2021-06-03,,GCRT_03Jun2021,GCRT_25July2021,GCRT_10Sep2021,,,,
+36,GCHR,Hermit's Rest,South Rim,Grand Canyon,outdoor,2021-06-03,,GCHR_03June2021,GCHR_25July2021,GCHR_10Sep2021,,,,
+37,GCPP,Powel's Point,South Rim,Grand Canyon,outdoor,2021-06-03,,GCPP_03June2021,GCPP_25Jul2021,GCPP_10Sep2021,,,,
+38,GCNRM,Motel,North Rim,Grand Canyon,outdoor,2021-06-08,,NRLM_8June2021,NRLM_30June2021,,,,,
+39,GCBAC,Bright Angel Campground ,Inner Canyon,Grand Canyon,outdoor,2021-05-07,,GCBAC_07May2021,,GC22_12Sep2021,GC22_03Dec2021,GC22_09Mar2022,,
+40,GCBB,Boat Beach,Inner Canyon,Grand Canyon,outdoor,2021-06-06,,GCBB_June2021,GCBB_12Sep2021,GCBB_03Dec2021,GCBB_09Mar2022,,,
+41,GCPR,Phantom Ranch Roof,Inner Canyon,Grand Canyon,building,2022-03-09,,GCPR_09Mar2022,,,,,,
+42,GCPN,Phantom Natural Boulder Outcrop,Inner Canyon,Grand Canyon,outdoor,2022-03-09,,GCPN_09Mar2022,,,,,,
+DuplicateSite,ZL7,Dungeon 2,Lodge,,building,,,ZL7_04Nov2020,ZL7_10Dec2020,ZL7_19Jan2021,ZL7_16Feb2021,,,
+PilotSite,SB,Smithsonian Butte,Maintenance Yard,Zion,outdoor,,,SB1_07Nov2020,SB1_20Dec2020,SB1_19Jan2021,SB1_16Feb2021,,,
+PilotSite,ZL4,,Lodge,Zion,building,,,ZL4_04Nov2020,ZL4_10Dec2020,ZL4_19Jan2021,ZL4_16Feb2021,ZL4_10May2021,,
+PilotSite,PC2,Pine Creek ,Lodge,Zion,outdoor,,,PC2_20Jan2021,PC2_16Feb2021,,,,,
+PilotSite,ZL5,Fireplace,Lodge,Zion,building,,,,,,,,,
+PilotSite,GCTC,Trash Compactor,Inner Canyon,Grand Canyon,outdoor,,,,,,,,,
+PilotSite,GCWP,Water Plant,Inner Canyon,Grand Canyon,outdoor,,,,,,,,,
+PilotSite,NL7,Outside Zion Lodge near vending,,,outdoor,,,NL7_15Nov2020,NL7_10Dec2020,NL7_19Jan2021,,,,
