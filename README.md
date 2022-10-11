@@ -13,7 +13,7 @@ _Last updated: April 18, 2022_
 * John Mark Simmons (CURO Spring 2019)
 * Caroline Aikens (CURO/ECOL4960R Summer 2020)
 * Sydney Speir (CURO/ECOL4960R Spring 2021)
-* CJ Jones (CURO/BIO4960R Spring 2022)
+* CJ Jones (CURO/BIO4960R Spring 2022, Summer Foundation Fellowship, Altizer Lab Student Worker Fall 2022)
 
 ### Background: 
 
