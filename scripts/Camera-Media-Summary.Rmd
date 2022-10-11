@@ -1,7 +1,7 @@
 ---
 title: "Camera-Media-Status"
-author: "Anna Willoughby"
-date: "9/9/2022"
+author: "Anna Willoughby, CJ Jones"
+date: sys.Date()
 output:
   html_document: default
   pdf_document: default
@@ -9,9 +9,14 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+# data wrangling 
 library(tidyr)
 library(dplyr)
+
+# multiple machine compatibility 
 library(here)
+# date manipulation 
 library(lubridate)
 ```
 
