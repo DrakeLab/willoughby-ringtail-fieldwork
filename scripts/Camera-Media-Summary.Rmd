@@ -2,7 +2,9 @@
 title: "Camera-Media-Status"
 author: "Anna Willoughby"
 date: "9/9/2022"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -10,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyr)
 library(dplyr)
 library(here)
+library(lubridate)
 ```
 
 # Status of Canyon Critters Camera Media
@@ -45,7 +48,8 @@ count_building <- site_list %>%
 prop_building <- round(nrow(count_building)/nrow(site_list)*100)
 
 days_count <- days %>%
-  filter(status != "Not Yet Deployed")
+  filter(status != "Not Yet Deployed") %>%
+  filter(!is.na(status))
 
 days_functional <- days_count %>%
   filter(status == "Functional")
@@ -93,11 +97,14 @@ Across all sites, cameras captured `r count_triggers_total` trigger events, of w
 ```{r maintenancegraphs, include=TRUE}
 # graphs
 # deployment date graph -- pivot the dates
-deployment_data <- days %>%
+deployment_data_wide <- days %>%
   filter(days_since_deployment != "???") %>% filter(days_since_deployment != "n/a") %>%
   select(site_id, date, trap_day) %>%
   arrange(date) %>%
   pivot_wider(names_from = date, values_from = trap_day)
+# deployment_data <- colSums(!is.na(deployment_data_wide)) %>%
+  # as.data.frame(deployment_data) %>% setNames(c("sites_deployed"))
+# ggplot2(data = deployment_data, aes(x = ))
 ```
 
 ## Data Storage and Status
