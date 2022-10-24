@@ -105,6 +105,13 @@ mean_event_duration <- mean(events$Event_Duration_Days, na.rm = TRUE)
 # Count number of trigger events across all sites and dates
 count_triggers_total <- sum(events$n_TriggerEvents, na.rm = TRUE)
 
+#Calculate proportion of animal detections
+count_detections <- detection %>%
+  filter(species_detected != "false_trigger") %>%
+  filter(!is.na(species_detected)) %>%
+  nrow()
+prop_detections <- round(count_detections/count_triggers_total*100)
+
 ```
 
 ## Study Design and Maintenance
@@ -113,7 +120,7 @@ From `r start_date`, cameras were deployed at `r nrow(site_list)` sites over `r 
 
 Camera data is collected periodically in check events. Across all sites, camera data has been collected `r nrow(events)` times. Each check event covers an average of `r mean_event_duration` camera days, with an average of NUMBER (PERCENT) functional camera days.
 
-Across all sites, cameras captured `r count_triggers_total` trigger events, of which NUMBER (PERCENT) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured NUMBER trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured NUMBER trigger events, covering DURATION.
+Across all sites, cameras captured `r count_triggers_total` trigger events, of which `r count_detections` (`r prop_detections`%) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured NUMBER trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured NUMBER trigger events, covering DURATION.
 
 ```{r maintenancegraphs, include=TRUE, echo=FALSE}
 
