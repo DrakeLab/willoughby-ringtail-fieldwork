@@ -21,6 +21,12 @@ library(here)
 
 # date formatting
 library(lubridate)
+
+# load in datasets 
+trapdays <- read.csv(here(file = "data/camera-data/camera_days.csv")) # trap days and status 
+events <- read.csv(here(file = "data/camera-data/check_event.csv")) # check events
+detection <- read.csv(here(file = "data/camera-data/detection_info.csv")) # camera triggers
+sites <- read.csv(here(file = "data/camera-data/site_info.csv")) # site information
 ```
 
 # Status of Canyon Critters Camera Media
@@ -29,14 +35,11 @@ Report date: `r Sys.Date()`
 
 ## Camera Method Summary
 
-<!-- Should this be a separate paragraph/section from the one about maintenance? Or is this just a placeholder heading? -->
+
+
+## Study Design and Maintenance
 
 ```{r data, include=FALSE, echo=FALSE}
-# load in datasets 
-trapdays <- read.csv(here(file = "data/camera-data/camera_days.csv")) # trap days and status 
-events <- read.csv(here(file = "data/camera-data/check_event.csv")) # check events
-detection <- read.csv(here(file = "data/camera-data/detection_info.csv")) # camera triggers
-sites <- read.csv(here(file = "data/camera-data/site_info.csv")) # site information
 
 # transform trap days into actual functional days of study. 
 study_days <- trapdays %>% 
@@ -114,20 +117,20 @@ prop_detections <- round(count_detections/count_triggers_total*100)
 
 ```
 
-## Study Design and Maintenance
+In the study design, indoor sites have XX type of trigger and outdoor sites have XX type of trigger generally.
 
 From `r start_date`, cameras were deployed at `r nrow(site_list)` sites over `r nrow(study_days)` days, for a total of `r nrow(study_days)` camera days. `r nrow(count_natural)` (`r prop_natural`%) cameras are located at natural sites and `r nrow(count_building)` (`r prop_building`%) are located at building sites. The cameras were functional for `r nrow(site_days_functional)` camera days, `r prop_functional`% of the study period. Camera function was interrupted when a camera had a full SD card (`r nrow(site_days_sd_full)` camera days [`r prop_sd_full`%]), a dead battery (`r nrow(site_days_batteries_dead)` camera days [`r prop_batteries_dead`%]), or was dislodged or misplaced (`r nrow(site_days_dislodged)` camera days [`r prop_dislodged`%]).
 
-Camera data is collected periodically in check events. Across all sites, camera data has been collected `r nrow(events)` times. Each check event covers an average of `r mean_event_duration` camera days, with an average of NUMBER (PERCENT) functional camera days.
-
-Across all sites, cameras captured `r count_triggers_total` trigger events, of which `r count_detections` (`r prop_detections`%) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured NUMBER trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured NUMBER trigger events, covering DURATION.
+Camera data is collected seasonally, on average every 3 months. Across all sites, camera data has been collected `r nrow(events)` times. Each check event covers an average of `r mean_event_duration` camera days, with an average of NUMBER (PERCENT) functional camera days.
 
 ```{r maintenancegraphs, include=TRUE, echo=FALSE}
 
 # Plot out relationship between date and functionality 
 study_period_plot <- ggplot(study_days) +
-  geom_col(aes(x = date, y = n_cameras_deployed)) +
-  labs(y = "Number of cameras deployed")
+  geom_col(aes(x = lubridate::ymd(date), y = n_cameras_deployed)) +
+  scale_x_date(date_breaks = "1 month") +
+  labs(x = "Date", y = "Number of cameras deployed") +
+  theme(axis.text.x = element_text(angle=45))
 study_period_plot
 
 ```
@@ -150,3 +153,9 @@ prop_upload <- round(upload/count_events*100,1)
 
 ```
 Camera data is stored by check event. Of the `r nrow(events)` check events, `r backup` (`r prop_backup`%) are stored in two physical locations. `r upload` (`r prop_upload`%) are uploaded to the Canyon Critters Zooniverse project.
+
+## Preliminary Analysis
+
+depends on data storage and status
+
+Across all sites, cameras captured `r count_triggers_total` trigger events, of which `r count_detections` (`r prop_detections`%) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured NUMBER trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured NUMBER trigger events, covering DURATION.
