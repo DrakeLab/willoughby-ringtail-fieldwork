@@ -35,7 +35,13 @@ Report date: `r Sys.Date()`
 
 ## Camera Method Summary
 
+Camera traps deployed at natural (outdoor) and building (indoor) sites in Grand Canyon and Zion National Parks capture animal activity by recording images or videos of detected movement. Camera data is collected seasonally, on average every 3 months. Collected data is organized and formatted for upload to Zooniverse, where citizen science volunteers help to identify animals recorded by the cameras.
 
+Sites are the locations where cameras are deployed alongside a tunnel containing bait and hair and paw print collection materials. Sites are either natural sites located in outdoor locations in the parks, or building sites located in areas of park buildings such as crawlspaces and attics. Each site has a unique alphanumeric ID.
+
+Camera check events are the events when sites are checked. Camera data is collected and fresh SD cards and batteries are installed. Camera checks are named for the date the data is collected, which is the final day of that check event. Camera checks are named with the site ID, "CC" for camera check, and the date of collection. Check event duration is measured in days.
+
+Study days are the dates during which cameras generally are collecting data. Camera days are the dates during which an individual camera is collecting data, and consist of a study day combined with a site ID. 
 
 ## Study Design and Maintenance
 
@@ -79,7 +85,7 @@ count_building <- site_list %>%
 prop_building <- round(nrow(count_building)/nrow(site_list)*100)
 
 # Count number of trap days in study
-days_count <- trapdays %>%
+camera_days_count <- trapdays %>%
   filter(status != "Not Yet Deployed")
 
 # Calculate number of functional trap days
@@ -117,9 +123,9 @@ prop_detections <- round(count_detections/count_triggers_total*100)
 
 ```
 
-In the study design, indoor sites have XX type of trigger and outdoor sites have XX type of trigger generally.
+In the study design, indoor sites are generally set to record XX-second videos and outdoor sites are generally set to record two photos in succession.
 
-From `r start_date`, cameras were deployed at `r nrow(site_list)` sites over `r nrow(study_days)` days, for a total of `r nrow(study_days)` camera days. `r nrow(count_natural)` (`r prop_natural`%) cameras are located at natural sites and `r nrow(count_building)` (`r prop_building`%) are located at building sites. The cameras were functional for `r nrow(site_days_functional)` camera days, `r prop_functional`% of the study period. Camera function was interrupted when a camera had a full SD card (`r nrow(site_days_sd_full)` camera days [`r prop_sd_full`%]), a dead battery (`r nrow(site_days_batteries_dead)` camera days [`r prop_batteries_dead`%]), or was dislodged or misplaced (`r nrow(site_days_dislodged)` camera days [`r prop_dislodged`%]).
+From `r start_date`, cameras were deployed at `r nrow(site_list)` sites over `r nrow(study_days)` days, for a total of `r nrow(camera_days_count)` camera days. `r nrow(count_natural)` (`r prop_natural`%) cameras are located at natural sites and `r nrow(count_building)` (`r prop_building`%) are located at building sites. The cameras were functional for `r nrow(site_days_functional)` camera days, `r prop_functional`% of the study period. Camera function was interrupted when a camera had a full SD card (`r nrow(site_days_sd_full)` camera days [`r prop_sd_full`%]), a dead battery (`r nrow(site_days_batteries_dead)` camera days [`r prop_batteries_dead`%]), or was dislodged or misplaced (`r nrow(site_days_dislodged)` camera days [`r prop_dislodged`%]).
 
 Camera data is collected seasonally, on average every 3 months. Across all sites, camera data has been collected `r nrow(events)` times. Each check event covers an average of `r mean_event_duration` camera days, with an average of NUMBER (PERCENT) functional camera days.
 
@@ -153,6 +159,12 @@ prop_upload <- round(upload/count_events*100,1)
 
 ```
 Camera data is stored by check event. Of the `r nrow(events)` check events, `r backup` (`r prop_backup`%) are stored in two physical locations. `r upload` (`r prop_upload`%) are uploaded to the Canyon Critters Zooniverse project.
+
+``` {r storagegraphs, include = TRUE, echo = FALSE}
+
+
+
+```
 
 ## Preliminary Analysis
 
