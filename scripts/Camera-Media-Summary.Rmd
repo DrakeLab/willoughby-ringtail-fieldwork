@@ -89,24 +89,24 @@ camera_days_count <- trapdays %>%
   filter(status != "Not Yet Deployed")
 
 # Calculate number of functional trap days
-site_days_functional <- days_count %>%
+site_days_functional <- camera_days_count %>%
   filter(status == "Functional")
-prop_functional <- round(nrow(site_days_functional)/nrow(days_count)*100,1)
+prop_functional <- round(nrow(site_days_functional)/nrow(camera_days_count)*100,1)
 
 # Calculate number of trap days where SD card was full
-site_days_sd_full <- days_count %>%
+site_days_sd_full <- camera_days_count %>%
   filter(status == "Card Full")
-prop_sd_full <- round(nrow(site_days_sd_full)/nrow(days_count)*100,1)
+prop_sd_full <- round(nrow(site_days_sd_full)/nrow(camera_days_count)*100,1)
 
 # Calculate number of trap days where batteries were dead
-site_days_batteries_dead <- days_count %>%
+site_days_batteries_dead <- camera_days_count %>%
   filter(status == "Batteries Dead")
-prop_batteries_dead <- round(nrow(site_days_batteries_dead)/nrow(days_count)*100)
+prop_batteries_dead <- round(nrow(site_days_batteries_dead)/nrow(camera_days_count)*100)
 
 # Calculate number of trap days where camera was dislodged
-site_days_dislodged <- days_count %>%
+site_days_dislodged <- camera_days_count %>%
   filter(status == "Camera Dislodged")
-prop_dislodged <- round(nrow(site_days_dislodged)/nrow(days_count)*100,1)
+prop_dislodged <- round(nrow(site_days_dislodged)/nrow(camera_days_count)*100,1)
 
 # Calculate average check event duration
 mean_event_duration <- mean(events$Event_Duration_Days, na.rm = TRUE)
@@ -152,17 +152,23 @@ count_events <- nrow(events)
 prop_backup <- round(backup/count_events*100,1)
 
 # Calculate number of events that are uploaded to Zooniverse
-upload <- events %>%
-  filter(Uploaded_Zooniverse == "Yes") %>%
-  nrow()
-prop_upload <- round(upload/count_events*100,1)
+upload_zooniverse <- events %>%
+  filter(Uploaded_Zooniverse != "No")
+upload_zooniverse_count <- nrow(upload_zooniverse)
+prop_upload <- round(upload_zooniverse_count/count_events*100,1)
 
 ```
-Camera data is stored by check event. Of the `r nrow(events)` check events, `r backup` (`r prop_backup`%) are stored in two physical locations. `r upload` (`r prop_upload`%) are uploaded to the Canyon Critters Zooniverse project.
+Camera data is stored by check event. Of the `r nrow(events)` check events, `r backup` (`r prop_backup`%) are stored in two physical locations. `r upload_zooniverse_count` (`r prop_upload`%) are uploaded to the Canyon Critters Zooniverse project.
 
 ``` {r storagegraphs, include = TRUE, echo = FALSE}
 
-
+# plot uploads to Zooniverse against date
+upload_zooniverse_plot <- ggplot(upload_zooniverse) +
+  geom_col(aes(x = lubridate::ymd(date), y = Uploaded_Zooniverse)) +
+  scale_x_date(date_breaks = "1 month") +
+  labs(x = "Date", y = "Check events uploaded to Zooniverse") +
+  theme(axis.text.x = element_text(angle=45))
+upload_zooniverse_plot 
 
 ```
 
