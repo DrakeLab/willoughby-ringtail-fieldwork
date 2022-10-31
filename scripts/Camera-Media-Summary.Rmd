@@ -39,9 +39,11 @@ Camera traps deployed at natural (outdoor) and building (indoor) sites in Grand 
 
 Sites are the locations where cameras are deployed alongside a tunnel containing bait and hair and paw print collection materials. Sites are either natural sites located in outdoor locations in the parks, or building sites located in areas of park buildings such as crawlspaces and attics. Each site has a unique alphanumeric ID.
 
-Camera check events are the events when sites are checked. Camera data is collected and fresh SD cards and batteries are installed. Camera checks are named for the date the data is collected, which is the final day of that check event. Camera checks are named with the site ID, "CC" for camera check, and the date of collection. Check event duration is measured in days.
+Camera check events are the events when sites are checked. Camera data is collected and fresh SD cards and batteries are installed. Camera checks are named for the date the data is collected, which is the final day of that check event. Camera checks are named with the site ID, "CC" for camera check, and the date of collection. Check event duration is measured in days. 
 
-Study days are the dates during which cameras generally are collecting data. Camera days are the dates during which an individual camera is collecting data, and consist of a study day combined with a site ID. 
+Each camera check event contains some number of trigger events, the instances in which the camera was triggered to record photos or video. Trigger events are intended to capture animal activity, but in some instances movement due to wind, light, or other non-animal sources causes a camera to trigger. As such, animal detections are "successful" trigger events in which the camera was activated by animal movement, while trigger events may be animal detections or false triggers.
+
+Study days are the dates during which cameras generally are collecting data. Camera days are the dates during which an individual camera is collecting data, and consist of a study day combined with a site ID.
 
 ## Study Design and Maintenance
 
@@ -153,18 +155,18 @@ prop_backup <- round(backup/count_events*100,1)
 
 # Calculate number of events that are uploaded to Zooniverse
 upload_zooniverse <- events %>%
-  filter(Uploaded_Zooniverse != "No")
-upload_zooniverse_count <- nrow(upload_zooniverse)
-prop_upload <- round(upload_zooniverse_count/count_events*100,1)
+  filter(Uploaded_Zooniverse != "No") %>%
+  summarise(n_upload_zooniverse = n_distinct(CameraCaptureEvent))
+prop_upload <- round(upload_zooniverse$n_upload_zooniverse/count_events*100,1)
 
 ```
-Camera data is stored by check event. Of the `r nrow(events)` check events, `r backup` (`r prop_backup`%) are stored in two physical locations. `r upload_zooniverse_count` (`r prop_upload`%) are uploaded to the Canyon Critters Zooniverse project.
+Camera data is stored by check event. Of the `r nrow(events)` check events, `r backup` (`r prop_backup`%) are stored in two physical locations. `r upload_zooniverse$n_upload_zooniverse` (`r prop_upload`%) are uploaded to the Canyon Critters Zooniverse project.
 
 ``` {r storagegraphs, include = TRUE, echo = FALSE}
 
-# plot uploads to Zooniverse against date
-upload_zooniverse_plot <- ggplot(upload_zooniverse) +
-  geom_col(aes(x = lubridate::ymd(date), y = Uploaded_Zooniverse)) +
+# plot progress of Zooniverse uploads
+upload_zooniverse_plot <- ggplot(events) +
+  geom_bar(aes(x = lubridate::ymd(Uploaded_Zooniverse))) +
   scale_x_date(date_breaks = "1 month") +
   labs(x = "Date", y = "Check events uploaded to Zooniverse") +
   theme(axis.text.x = element_text(angle=45))
@@ -173,7 +175,5 @@ upload_zooniverse_plot
 ```
 
 ## Preliminary Analysis
-
-depends on data storage and status
 
 Across all sites, cameras captured `r count_triggers_total` trigger events, of which `r count_detections` (`r prop_detections`%) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured NUMBER trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured NUMBER trigger events, covering DURATION.
