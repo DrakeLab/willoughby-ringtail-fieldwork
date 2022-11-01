@@ -111,25 +111,15 @@ site_days_dislodged <- camera_days_count %>%
 prop_dislodged <- round(nrow(site_days_dislodged)/nrow(camera_days_count)*100,1)
 
 # Calculate average check event duration
-mean_event_duration <- mean(events$Event_Duration_Days, na.rm = TRUE)
-
-# Count number of trigger events across all sites and dates
-count_triggers_total <- sum(events$n_TriggerEvents, na.rm = TRUE)
-
-#Calculate proportion of animal detections
-count_detections <- detection %>%
-  filter(species_detected != "false_trigger") %>%
-  filter(!is.na(species_detected)) %>%
-  nrow()
-prop_detections <- round(count_detections/count_triggers_total*100)
+mean_event_duration <- round(mean(events$Event_Duration_Days, na.rm = TRUE), 1)
 
 ```
 
 In the study design, indoor sites are generally set to record XX-second videos and outdoor sites are generally set to record two photos in succession.
 
-From `r start_date`, cameras were deployed at `r nrow(site_list)` sites over `r nrow(study_days)` days, for a total of `r nrow(camera_days_count)` camera days. `r nrow(count_natural)` (`r prop_natural`%) cameras are located at natural sites and `r nrow(count_building)` (`r prop_building`%) are located at building sites. The cameras were functional for `r nrow(site_days_functional)` camera days, `r prop_functional`% of the study period. Camera function was interrupted when a camera had a full SD card (`r nrow(site_days_sd_full)` camera days [`r prop_sd_full`%]), a dead battery (`r nrow(site_days_batteries_dead)` camera days [`r prop_batteries_dead`%]), or was dislodged or misplaced (`r nrow(site_days_dislodged)` camera days [`r prop_dislodged`%]).
+From `r start_date`, cameras were deployed at `r nrow(site_list)` sites over `r format(nrow(study_days), big.mark = ",")` days, for a total of `r format(nrow(camera_days_count), big.mark = ",")` camera days. `r nrow(count_natural)` (`r prop_natural`%) cameras are located at natural sites and `r nrow(count_building)` (`r prop_building`%) are located at building sites. The cameras were functional for `r format(nrow(site_days_functional), big.mark = ",")` camera days, `r prop_functional`% of the study period. Camera function was interrupted when a camera had a full SD card (`r format(nrow(site_days_sd_full), big.mark = ",")` camera days [`r prop_sd_full`%]), a dead battery (`r format(nrow(site_days_batteries_dead), big.mark = ",")` camera days [`r prop_batteries_dead`%]), or was dislodged or misplaced (`r format(nrow(site_days_dislodged), big.mark = ",")` camera days [`r prop_dislodged`%]).
 
-Camera data is collected seasonally, on average every 3 months. Across all sites, camera data has been collected `r nrow(events)` times. Each check event covers an average of `r mean_event_duration` camera days, with an average of NUMBER (PERCENT) functional camera days.
+Camera data is collected seasonally, on average every 3 months. Across all sites, camera data has been collected `r format(nrow(events), big.mark = ",")` times. Each check event covers an average of `r mean_event_duration` camera days, with an average of NUMBER (PERCENT) functional camera days.
 
 ```{r maintenancegraphs, include=TRUE, echo=FALSE}
 
@@ -146,20 +136,21 @@ study_period_plot
 ## Data Storage and Status
 ``` {r storage, include=FALSE, echo=FALSE}
 
-# Calculate number of events that are backed up to 2 physical locations
+# Calculate number of check events that are backed up to 2 physical locations
 backup <- events %>%
   filter(In_Two_Locations == "Yes") %>%
   nrow()
 count_events <- nrow(events)
 prop_backup <- round(backup/count_events*100,1)
 
-# Calculate number of events that are uploaded to Zooniverse
+# Calculate number of check events that are uploaded to Zooniverse
 upload_zooniverse <- events %>%
   filter(Uploaded_Zooniverse != "No") %>%
   summarise(n_upload_zooniverse = n_distinct(CameraCaptureEvent))
 prop_upload <- round(upload_zooniverse$n_upload_zooniverse/count_events*100,1)
 
 ```
+
 Camera data is stored by check event. Of the `r nrow(events)` check events, `r backup` (`r prop_backup`%) are stored in two physical locations. `r upload_zooniverse$n_upload_zooniverse` (`r prop_upload`%) are uploaded to the Canyon Critters Zooniverse project.
 
 ``` {r storagegraphs, include = TRUE, echo = FALSE}
@@ -176,4 +167,30 @@ upload_zooniverse_plot
 
 ## Preliminary Analysis
 
-Across all sites, cameras captured `r count_triggers_total` trigger events, of which `r count_detections` (`r prop_detections`%) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured NUMBER trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured NUMBER trigger events, covering DURATION.
+``` {r analysis, include = FALSE, echo = FALSE}
+
+# Count number of trigger events across all sites and dates
+count_triggers_total <- sum(events$n_TriggerEvents, na.rm = TRUE)
+
+#Calculate proportion of animal detections
+count_detections <- detection %>%
+  filter(species_detected != "false_trigger") %>%
+  filter(!is.na(species_detected)) %>%
+  nrow()
+prop_detections <- round(count_detections/count_triggers_total*100)
+
+# Count number of trigger events across natural sites
+triggers_natural <- events %>%
+  filter(CameraSetting == "photo")
+count_triggers_natural <- sum(triggers_natural$n_TriggerEvents, na.rm = TRUE)
+# how can we actually filter for all natural sites, not just all check events that were set to photo?
+
+# Count number of trigger events across building sites
+triggers_building <- events %>%
+  filter(CameraSetting == "video")
+count_triggers_building <- sum(triggers_building$n_TriggerEvents, na.rm = TRUE)
+# how can we actually filter for all building sites, not just all check events that were set to video?
+
+```
+
+Across all sites, cameras captured `r format(count_triggers_total, big.mark = ",")` trigger events, of which `r format(count_detections, big.mark = ",")` (`r prop_detections`%) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured `r format(count_triggers_natural, big.mark = ",")` trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured `r format(count_triggers_building, big.mark = ",")` trigger events, covering DURATION.
