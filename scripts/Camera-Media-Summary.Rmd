@@ -24,7 +24,7 @@ library(lubridate)
 
 # load in datasets 
 trapdays <- read.csv(here(file = "data/camera-data/camera_days.csv")) # trap days and status 
-events <- read.csv(here(file = "data/camera-data/check_event.csv")) # check events
+events <- read.csv(here(file = "data/camera-data/camera_capture_event.csv")) # check events
 detection <- read.csv(here(file = "data/camera-data/detection_info.csv")) # camera triggers
 sites <- read.csv(here(file = "data/camera-data/site_info.csv")) # site information
 ```
@@ -138,7 +138,8 @@ study_period_plot
 
 # Calculate number of check events that are backed up to 2 physical locations
 backup <- events %>%
-  filter(In_Two_Locations == "Yes") %>%
+  filter(On_Drake_Harddrive == "Yes") %>%
+  filter(On_Monarch_Harddrive == "Yes") %>%
   nrow()
 count_events <- nrow(events)
 prop_backup <- round(backup/count_events*100,1)
@@ -146,7 +147,7 @@ prop_backup <- round(backup/count_events*100,1)
 # Calculate number of check events that are uploaded to Zooniverse
 upload_zooniverse <- events %>%
   filter(Uploaded_Zooniverse != "No") %>%
-  summarise(n_upload_zooniverse = n_distinct(CameraCaptureEvent))
+  summarise(n_upload_zooniverse = n_distinct(CameraCaptureEvent_id))
 prop_upload <- round(upload_zooniverse$n_upload_zooniverse/count_events*100,1)
 
 ```
