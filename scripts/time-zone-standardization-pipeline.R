@@ -24,12 +24,22 @@ camera_time <- camera_capture_events %>%
 detection_times <- left_join(
   camera_time, 
   detections,
-  by = c("CameraCaptureEvent_id" = "CameraCaptures"))
+  by = "CameraCaptureEvent_id")
 
-# adjust incorrect camera times to fit site time
-detection_times %>%
-  
+ UTC
+# adjust incorrect camera times to fit site time for Media 1 
+detection_times$MediaDateTime1_step1 <- ifelse(detection_times$SiteTime_Correct == "Yes", 
+                                               detection_times$MediaDateTime1, 
+                                               ifelse(detection_times$SiteTime_Adjust_Direction == "positive",
+                                                      detection_times$SiteTime_Correct + detection_times$SiteTime_Adjust_Value, 
+                                                      detection_times$SiteTime_Correct - detection_times$SiteTime_Adjust_Value))
+                                                      
+# adjust incorrect camera times to fit site time for Media 2                                                
+detection_times$MediaDateTime2_step1 <-  ifelse(detection_times$SiteTime_Correct == "Yes", 
+                                               detection_times$MediaDateTime2, 
+                                               ifelse(detection_times$SiteTime_Adjust_Direction == "positive",
+                                                      detection_times$SiteTime_Correct + detection_times$SiteTime_Adjust_Value, 
+                                                      detection_times$SiteTime_Correct - detection_times$SiteTime_Adjust_Value))
 
-# standardize site times to UTC
-
+# standardize site times to
 # write new csv
