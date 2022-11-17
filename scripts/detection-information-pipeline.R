@@ -13,12 +13,12 @@ library(here)
 library(lubridate)
 
 # set camera capture id to be added
-cce_id <- "GC15H_CC_08Mar2022" # change for each folder
+cce_id <- "GC15H_CC_11Sep2021" # change for each folder
 site_id <- "GC15H" # change for each folder
 
 # load in data
-detection_info <- read.csv(here(file = "data/camera-data/detection_info.csv"))
-manifest <- read.csv(file = "/media/caleb/SeagateExpansionDrive/anna/media_prep/Ringtail_Cameras/GC15H_CC_08Mar2022/manifest.csv") 
+detection_info <- read.csv(here("data/camera-data/detection_info.csv"))
+manifest <- read.csv(file = "/media/caleb/SeagateExpansionDrive/anna/media_prep/Ringtail_Cameras/GC15H_CC_11Sep2021/exif.csv") 
                       # update path with cce_id
 # paths on different machines
   # on Anna's macbook for Seagate 
@@ -55,6 +55,7 @@ manifest$individuals <- "to be added"
 manifest$notes <- "to be added"
 
 # arrange manifest to be joined
+detection_info <- select(detection_info, !X)
 manifest <- select(manifest, !X)
 manifest <- manifest[c(10, 6, 5, 8, 9, 7, 12, 1, 2, 13, 14, 3, 4, 15, 16, 17, 18, 11, 19)]
 
