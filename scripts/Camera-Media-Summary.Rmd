@@ -31,7 +31,7 @@ sites <- read.csv(here(file = "data/camera-data/site_info.csv")) # site informat
 
 # Status of Canyon Critters Camera Media
 
-Report date: `r Sys.Date()`
+Report date: <span style="color:blue">**`r Sys.Date()`**</span>
 
 ## Camera Method Summary
 
@@ -61,6 +61,7 @@ functional_trap_days <- trapdays %>%
   filter(status == "Functional") %>%
   group_by(date) %>%
   summarise(n_cameras_deployed = n_distinct(site_id)) # calculate # of cameras functional per day
+colnames(functional_trap_days)[colnames(functional_trap_days) == "n_cameras_deployed"] <- "n_cameras_functional"
 
 # Find date of deployment for each camera site
 deploy_date <- trapdays %>%
@@ -117,17 +118,23 @@ mean_event_duration <- round(mean(events$Event_Duration_Days, na.rm = TRUE), 1)
 
 In the study design, indoor sites are generally set to record XX-second videos and outdoor sites are generally set to record two photos in succession.
 
-From `r start_date`, cameras were deployed at `r nrow(site_list)` sites over `r format(nrow(study_days), big.mark = ",")` days, for a total of `r format(nrow(camera_days_count), big.mark = ",")` camera days. `r nrow(count_natural)` (`r prop_natural`%) cameras are located at natural sites and `r nrow(count_building)` (`r prop_building`%) are located at building sites. The cameras were functional for `r format(nrow(site_days_functional), big.mark = ",")` camera days, `r prop_functional`% of the study period. Camera function was interrupted when a camera had a full SD card (`r format(nrow(site_days_sd_full), big.mark = ",")` camera days [`r prop_sd_full`%]), a dead battery (`r format(nrow(site_days_batteries_dead), big.mark = ",")` camera days [`r prop_batteries_dead`%]), or was dislodged or misplaced (`r format(nrow(site_days_dislodged), big.mark = ",")` camera days [`r prop_dislodged`%]).
+From <span style="color:blue">**`r start_date`**</span>, cameras were deployed at <span style="color:blue">**`r nrow(site_list)`**</span> sites over <span style="color:blue">**`r format(nrow(study_days), big.mark = ",")`**</span> days, for a total of <span style="color:blue">**`r format(nrow(camera_days_count), big.mark = ",")`**</span> camera days. <span style="color:blue">**`r nrow(count_natural)`**</span> (<span style="color:blue">**`r prop_natural`%**</span>) cameras are located at natural sites and <span style="color:blue">**`r nrow(count_building)`**</span> (<span style="color:blue">**`r prop_building`%**</span>) are located at building sites. The cameras were functional for <span style="color:blue">**`r format(nrow(site_days_functional), big.mark = ",")`**</span> camera days, <span style="color:blue">**`r prop_functional`%**</span> of the study period. Camera function was interrupted when a camera had a full SD card (<span style="color:blue">**`r format(nrow(site_days_sd_full), big.mark = ",")`**</span> camera days [<span style="color:blue">**`r prop_sd_full`%**</span>]), a dead battery (<span style="color:blue">**`r format(nrow(site_days_batteries_dead), big.mark = ",")`**</span> camera days [<span style="color:blue">**`r prop_batteries_dead`%**</span>]), or was dislodged or misplaced (<span style="color:blue">**`r format(nrow(site_days_dislodged), big.mark = ",")`**</span> camera days [<span style="color:blue">**`r prop_dislodged`%**</span>]).
 
-Camera data is collected seasonally, on average every 3 months. Across all sites, camera data has been collected `r format(nrow(events), big.mark = ",")` times. Each check event covers an average of `r mean_event_duration` camera days, with an average of NUMBER (PERCENT) functional camera days.
+Camera data is collected seasonally, on average every 3 months. Across all sites, camera data has been collected <span style="color:blue">**`r format(nrow(events), big.mark = ",")`**</span> times. Each check event covers an average of <span style="color:blue">**`r mean_event_duration`**</span> camera days, with an average of NUMBER (PERCENT) functional camera days.
 
 ```{r maintenancegraphs, include=TRUE, echo=FALSE}
+# create dataframe with both number of cameras deployed and number of cameras functioning for each study day
+functional_study_days <- left_join(
+  study_days,
+  functional_trap_days
+)
 
 # Plot out relationship between date and functionality 
-study_period_plot <- ggplot(study_days) +
+study_period_plot <- ggplot(functional_study_days) +
   geom_col(aes(x = lubridate::ymd(date), y = n_cameras_deployed)) +
+  geom_col(aes(x = lubridate::ymd(date), y = n_cameras_functional, color = "tomato")) +
   scale_x_date(date_breaks = "1 month") +
-  labs(x = "Date", y = "Number of cameras deployed") +
+  labs(x = "Date", y = "Number of cameras", caption = "Fig. 1. Number of cameras deployed (black) and functioning (red) on each study day.") +
   theme(axis.text.x = element_text(angle=45))
 study_period_plot
 
@@ -152,11 +159,12 @@ prop_upload <- round(upload_zooniverse$n_upload_zooniverse/count_events*100,1)
 
 ```
 
-Camera data is stored by check event. Of the `r nrow(events)` check events, `r backup` (`r prop_backup`%) are stored in two physical locations. `r upload_zooniverse$n_upload_zooniverse` (`r prop_upload`%) are uploaded to the Canyon Critters Zooniverse project.
+Camera data is stored by check event. Of the <span style="color:blue">**`r nrow(events)`**</span> check events, <span style="color:blue">**`r backup`**</span> (<span style="color:blue">**`r prop_backup`%**</span>) are stored in two physical locations. <span style="color:blue">**`r upload_zooniverse$n_upload_zooniverse`**</span> (<span style="color:blue">**`r prop_upload`%**</span>) are uploaded to the Canyon Critters Zooniverse project.
 
 Camera data is not always aligned to the correct time (X metric) and check events occured in two timezones (). Time adjustments have been confirmed for X, but need to be addressed for X trigger events. Of the incorrect times, X% have been corrected to UTC.   
 
 ``` {r storagegraphs, include = TRUE, echo = FALSE}
+
 
 # plot progress of Zooniverse uploads
 upload_zooniverse_plot <- ggplot(events) +
@@ -196,4 +204,4 @@ count_triggers_building <- sum(triggers_building$n_TriggerEvents, na.rm = TRUE)
 
 ```
 
-Across all sites, cameras captured `r format(count_triggers_total, big.mark = ",")` trigger events, of which `r format(count_detections, big.mark = ",")` (`r prop_detections`%) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured `r format(count_triggers_natural, big.mark = ",")` trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured `r format(count_triggers_building, big.mark = ",")` trigger events, covering DURATION.
+Across all sites, cameras captured <span style="color:blue">**`r format(count_triggers_total, big.mark = ",")`**</span> trigger events, of which <span style="color:blue">**`r format(count_detections, big.mark = ",")`**</span> (<span style="color:blue">**`r prop_detections`%**</span>) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured <span style="color:blue">**`r format(count_triggers_natural, big.mark = ",")`**</span> trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured <span style="color:blue">**`r format(count_triggers_building, big.mark = ",")`**</span> trigger events, covering DURATION.
