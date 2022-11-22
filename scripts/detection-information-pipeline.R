@@ -8,12 +8,12 @@ library(dplyr)
 library(here)
 
 # set camera capture id to be added
-cce_id <- "GCBAR_CC_07Mar2022" # change for each folder
-site_id <- "GCBAR" # change for each folder
+cce_id <- "GCBB_CC_12Sep2021" # change for each folder
+site_id <- "GCBB" # change for each folder
 
 # load in data
 detection_info <- read.csv(here("data/camera-data/detection_info.csv"))
-manifest <- read.csv(file = "/media/caleb/SeagateExpansionDrive/anna/media_prep/Ringtail_Cameras/GCBAR_CC_07Mar2022/exif.csv") 
+manifest <- read.csv(file = "/media/caleb/SeagateExpansionDrive/anna/media_prep/Ringtail_Cameras/GCBB_CC_12Sep2021/manifest.csv") 
                       # update path with cce_id
 # paths on different machines
   # on Anna's macbook for Seagate 
@@ -29,22 +29,24 @@ manifest <- read.csv(file = "/media/caleb/SeagateExpansionDrive/anna/media_prep/
 manifest$CameraCaptureEvent_id <- cce_id
 manifest$SiteID <- site_id
 manifest$TriggerID <- paste0(cce_id, "_", manifest$X)
+
 # photo CCEs
-# colnames(manifest)[colnames(manifest) == "ImageFile1"] <- "MediaFile1"
-# colnames(manifest)[colnames(manifest) == "ImageFile2"] <- "MediaFile2"
-# colnames(manifest)[colnames(manifest) == "ImageDate1"] <- "Media1DateTime"
-# colnames(manifest)[colnames(manifest) == "ImageDate2"] <- "Media2DateTime"
+colnames(manifest)[colnames(manifest) == "ImageFile1"] <- "MediaFile1"
+colnames(manifest)[colnames(manifest) == "ImageFile2"] <- "MediaFile2"
+colnames(manifest)[colnames(manifest) == "ImageDate1"] <- "Media1DateTime"
+colnames(manifest)[colnames(manifest) == "ImageDate2"] <- "Media2DateTime"
+
 # video CCEs
-colnames(manifest)[colnames(manifest) == "SourceFile"] <- "MediaFile1"
-colnames(manifest)[colnames(manifest) == "FileModifyDate"] <- "Media1DateTime"
-manifest$MediaFile2 <- "n/a"
-manifest$Media2DateTime <-  "n/a"
+# colnames(manifest)[colnames(manifest) == "SourceFile"] <- "MediaFile1"
+# colnames(manifest)[colnames(manifest) == "FileModifyDate"] <- "Media1DateTime"
+# manifest$MediaFile2 <- "n/a"
+# manifest$Media2DateTime <-  "n/a"
 
 # CCE info that needs to be changed to match settings
-manifest$Settings <- "30 second video"
-manifest$media_type <- "video"
-manifest$SiteType <- "building"
-manifest$detection_duration <- "to be added"
+manifest$Settings <- "2 photos"
+manifest$media_type <- "photo"
+manifest$SiteType <- "natural"
+manifest$detection_duration <- "2"
 
 manifest$trap_day <- "to be added"
 manifest$MediaURL <- "n/a"

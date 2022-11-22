@@ -157,11 +157,19 @@ upload_zooniverse <- events %>%
   summarise(n_upload_zooniverse = n_distinct(CameraCaptureEvent_id))
 prop_upload <- round(upload_zooniverse$n_upload_zooniverse/count_events*100,1)
 
+# Calculate number of incorrect times
+trigger_time_incorrect <- events %>%
+  filter(events$SiteTime_Correct == "No") %>%
+  select(CameraCaptureEvent_id, SiteTime_Correct, n_TriggerEvents)
+count_trigger_time_incorrect <- sum(trigger_time_incorrect$n_TriggerEvents, na.rm = TRUE)
+
 ```
 
 Camera data is stored by check event. Of the <span style="color:blue">**`r nrow(events)`**</span> check events, <span style="color:blue">**`r backup`**</span> (<span style="color:blue">**`r prop_backup`%**</span>) are stored in two physical locations. <span style="color:blue">**`r upload_zooniverse$n_upload_zooniverse`**</span> (<span style="color:blue">**`r prop_upload`%**</span>) are uploaded to the Canyon Critters Zooniverse project.
 
-Camera data is not always aligned to the correct time (X metric) and check events occured in two timezones (). Time adjustments have been confirmed for X, but need to be addressed for X trigger events. Of the incorrect times, X% have been corrected to UTC.   
+Camera data is not always aligned to the correct time. Cameras may have their internal times offset from the correct time at the site. During a camera check, the discrepancy between the camera's internal time and the current time is recorded. Time adjustments have been confirmed for X, but need to be addressed for <span style="color:blue">**`r count_trigger_time_incorrect`**</span> trigger events. Of the incorrect times, X% have been corrected to UTC.
+
+Camera checks occur in two time zones (UTC -6 and UTC -7). Arizona uses UTC -7 year-round, while Utah uses UTC -7 during standard time and UTC -6 during Daylight Savings Time. After being standardized to UTC, trigger events are corrected to the appropriate time zone for the location and date where they were recorded. X% of times have been corrected to the appropriate time zone.
 
 ``` {r storagegraphs, include = TRUE, echo = FALSE}
 # create dataframe with 
