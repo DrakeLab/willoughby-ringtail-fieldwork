@@ -136,8 +136,22 @@ study_period_plot <- ggplot(functional_study_days) +
   scale_x_date(date_breaks = "1 month") +
   labs(x = "Date", y = "Number of cameras", caption = "Fig. 1. Number of cameras deployed (black) and functioning (red) on each study day.") +
   theme(axis.text.x = element_text(angle=45))
-study_period_plot
 
+
+# Plot out relationship between date and functionality (values)
+ggplot(trapdays, aes(fill=status, y=site_id, x=lubridate::ymd(date))) + 
+    geom_bar(position="stack", stat="identity") + 
+  scale_x_date(date_breaks = "1 month") +
+    labs(x = "Date", y = "Number of cameras", caption = "Fig. 1. Number of cameras deployed (black) and functioning (red) on each study day.") +
+  theme(axis.text.x = element_text(angle=45))   
+
+
+# Plot out relationship between date and functionality (% cameras)
+ggplot(trapdays, aes(fill=status, y=site_id, x=lubridate::ymd(date))) + 
+    geom_bar(position="fill", stat="identity") + 
+  scale_x_date(date_breaks = "1 month") +
+    labs(x = "Date", y = "Number of cameras", caption = "Fig. 1. Number of cameras deployed (black) and functioning (red) on each study day.") +
+  theme(axis.text.x = element_text(angle=45))   
 ```
 
 ## Data Storage and Status
