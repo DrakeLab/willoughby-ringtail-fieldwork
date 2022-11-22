@@ -164,7 +164,7 @@ Camera data is stored by check event. Of the <span style="color:blue">**`r nrow(
 Camera data is not always aligned to the correct time (X metric) and check events occured in two timezones (). Time adjustments have been confirmed for X, but need to be addressed for X trigger events. Of the incorrect times, X% have been corrected to UTC.   
 
 ``` {r storagegraphs, include = TRUE, echo = FALSE}
-
+# create dataframe with 
 
 # plot progress of Zooniverse uploads
 upload_zooniverse_plot <- ggplot(events) +
