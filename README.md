@@ -14,6 +14,8 @@ _Last updated: April 18, 2022_
 * Caroline Aikens (CURO/ECOL4960R Summer 2020)
 * Sydney Speir (CURO/ECOL4960R Spring 2021)
 * CJ Jones (CURO/BIO4960R Spring 2022, Summer Foundation Fellowship, Altizer Lab Student Worker Fall 2022)
+* Logan Owens (Altizer Lab Student Worker Fall 2022/Summer 2023; CURO/ECOL4960R Spring 2023)
+* Summit St. John (Altizer Lab Student Worker Fall 2023) 
 
 ### Background: 
 
@@ -24,10 +26,8 @@ The exploitation of human environments can benefit mesocarnivores by clustering 
 Large-scale camera trap studies have shown that mesocarnivores persist in urban environments by preferentially occupying the constricted natural forest habitats within the urban mosaic[10,11]. Some mesocarnivores can reside in human-built structures and may elude traditional grid-based camera surveys. Limited radio-telemetry studies of stone martens, raccoons, and other carnivores, show that building- dwelling individuals have smaller home ranges than wild counterparts[12–14]. This signals that human- built structures can be rich in resources, which could increase population densities and competitive interactions, particularly for territorial carnivores[15]. Mesocarnivores often use latrines, which are localized sites for repeated defecation, that can signal resource quality, territorial defense, or other social cues[16,17]. While rodent scat and bat guano in buildings are considered biological hazards causing diseases such as leptospirosis, histoplasmosis, and hantaviruses[18–20], mesocarnivore latrines disease status is unknown. Thus, buildings occupied by resident mesocarnivores with scat contamination may become a problematic disease interface for both mesocarnivores and humans occupying them.
 Some buildings can be a thermal refuge for mesocarnivores, buffering against the need for temperature regulation behaviors, and providing shelter from predators[21]. Use of these sites could therefore vary seasonally based on weather and changes in other species interactions and could further change mesocarnivore phenology. For instance, Widdows and Downs (2016) reported early breeding in structure-dwelling large-spotted genets in KwaZulu-Natal, South Africa, potentially to allow juvenile dispersal before attic temperatures become inhospitable[22]. Mesocarnivore diets are highly seasonally dependent, with individuals feasting on easily accessible resources following invertebrate emergence periods or fruiting seasons[23,24].
 
-### Research questions:
- 1) Do ringtails experience decreased predator and competitor diversity (“mesopredator release”)? 
- 2) Do ringtails shift their diet to include human foods and reduce natural prey and plant acquisition? 
- 3) Do structures impact wildlife community and ringtail diet choice to a greater degree during periods of environmental stress (winter season) and/or  human activity (summer season)?
+### Research question:
+ 1) How do the communities ringtails interact with, including predators, conspecifics, prey, and symbiotes, change in human-modified habitats? 
 
 ### Study design: 
 #### Site Selection 
