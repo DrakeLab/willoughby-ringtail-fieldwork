@@ -1,5 +1,5 @@
 # PROTOCOL FOR: 
-# Tourism impacts on wildlife behavior and health
+# Built structures modify species interactions of ringtails (*Bassariscus astutus*)
 
 _Last updated: April 18, 2022_
 
