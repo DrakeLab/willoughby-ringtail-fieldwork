@@ -39,9 +39,6 @@ Sites are equipped with motion-activated camera traps (Bushnell Trophy) that cap
 #### Ringtail diet and parasitism
 Ringtail scat is collected every three months for the two-year study duration to compare seasonal shifts in diet diversity (n ~ 320 samples) and stored in ethanol and frozen. I am using traditional diet identification methods by filtering scat through 1 mm mesh to collect human-derived materials like paper and foil, as well as use morphometric traits to distinguish biological fragments (e.g., insect wing patterns, tooth cusps, seed size and structure). These methods are insufficient at fine taxonomic scales, with only 6% of scat items identifiable to species, and most classified to family. Additionally, ringtail diet can include digestible material like nectar[37]. Therefore, a major limitation in ringtail, and all omnivorous mesocarnivore, diet descriptions is a bias toward organisms with identifiable features post digestion. To overcome this barrier, I will pursue metagenomic assays in collaboration with Dr. Noah Fierer at the University of Colorado Boulder using a variety of primers to target natural diet items (Ac12S for vertebrates, trnL for plants, ArthCOI for invertebrate[38]). Briefly, genomic DNA from scat will be extracted using the DNeasy PowerSoil HTP 96 Kit. The target sequence section will be amplified from each sample for subsequent indexing in a second round of PCR, and then sequenced via Illumina Miseq. Outsourcing samples to UC Boulder provides laboratory expertise, quality checks, and bioinformatics analysis. Taxonomy is assigned to each “exact sequence variant” by mapping sequences against GenBank reference data and voucher specimens, with a threshold of 90% considered a match.
 
-#### Ringtail nutrition and stress 
-[Here] is specific protocol for hair collection, processing, and analysis.
-
 ### Analysis: 
 *Species identifications*
 
