@@ -1,0 +1,227 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# data wrangling
+library(tidyr)
+library(dplyr)
+# plotting package 
+library(ggplot2)
+
+# multiple machine compatibility
+library(here)
+
+# date formatting
+library(lubridate)
+
+# load in datasets 
+trapdays <- read.csv(here(file = "data/camera-data/camera_days.csv")) # trap days and status 
+events <- read.csv(here(file = "data/camera-data/camera_capture_event.csv")) # check events
+detection <- read.csv(here(file = "data/camera-data/detection_info.csv")) # camera triggers
+sites <- read.csv(here(file = "data/camera-data/site_info.csv")) # site information
+```
+
+# Status of Canyon Critters Camera Media
+
+Author: Anna Willoughby
+Report date: <span style="color:blue">**`r Sys.Date()`**</span>
+
+## Camera Method Summary
+
+Camera traps deployed at natural (outdoor) and building (indoor) sites in Grand Canyon and Zion National Parks capture animal activity by recording images or videos of detected movement. Camera data is collected seasonally, on average every 3 months. Collected data is organized and formatted for upload to Zooniverse, where citizen science volunteers help to identify animals recorded by the cameras.
+
+Sites are the locations where cameras are deployed alongside a tunnel containing bait and hair and paw print collection materials. Sites are either natural sites located in outdoor locations in the parks, or building sites located in areas of park buildings such as crawlspaces and attics. Each site has a unique alphanumeric ID.
+
+Camera check events are the events when sites are checked. Camera data is collected and fresh SD cards and batteries are installed. Camera checks are named for the date the data is collected, which is the final day of that check event. Camera checks are named with the site ID, "CC" for camera check, and the date of collection. Check event duration is measured in days. 
+
+Each camera check event contains some number of trigger events, the instances in which the camera was triggered to record photos or video. Trigger events are intended to capture animal activity, but in some instances movement due to wind, light, or other non-animal sources causes a camera to trigger. As such, animal detections are "successful" trigger events in which the camera was activated by animal movement, while trigger events may be animal detections or false triggers.
+
+Study days are the dates during which cameras generally are collecting data. Camera days are the dates during which an individual camera is collecting data, and consist of a study day combined with a site ID.
+
+## Study Design and Maintenance
+
+```{r data, include=FALSE, echo=FALSE}
+
+# transform trap days into actual functional days of study. 
+study_days <- trapdays %>% 
+  filter(status != "Not Yet Deployed") %>%
+  group_by(date) %>% 
+  summarise(n_cameras_deployed = n_distinct(site_id)) # calculate # of cameras deployed per day 
+            # add functional trap days per actual day 
+
+# filter trap days to functional days only
+functional_trap_days <- trapdays %>% 
+  filter(status == "Functional") %>%
+  group_by(date) %>%
+  summarise(n_cameras_deployed = n_distinct(site_id)) # calculate # of cameras functional per day
+colnames(functional_trap_days)[colnames(functional_trap_days) == "n_cameras_deployed"] <- "n_cameras_functional"
+
+# Find date of deployment for each camera site
+deploy_date <- trapdays %>%
+  filter(days_since_deployment == 0) %>%
+  select(site_id, date, trap_day) %>%
+  arrange(date)
+
+# Select earliest date of deployment as study start date
+start_date <- deploy_date %>%
+  filter(date == min(deploy_date$date)) %>% select(date)
+
+# List study sites
+site_list <- sites %>% 
+  filter(SiteNumber != "PilotSite") %>%
+  filter (SiteNumber != "DuplicateSite") %>%
+  select(SiteID, SiteType)
+
+# Count sites by type and calculate proportion of all sites of each type
+count_natural <- site_list %>%
+  filter(SiteType == "outdoor")
+prop_natural <- round(nrow(count_natural)/nrow(site_list)*100)
+count_building <- site_list %>%
+  filter(SiteType == "building")
+prop_building <- round(nrow(count_building)/nrow(site_list)*100)
+
+# Count number of trap days in study
+camera_days_count <- trapdays %>%
+  filter(status != "Not Yet Deployed")
+
+# Calculate number of functional trap days
+site_days_functional <- camera_days_count %>%
+  filter(status == "Functional")
+prop_functional <- round(nrow(site_days_functional)/nrow(camera_days_count)*100,1)
+
+# Calculate number of trap days where SD card was full
+site_days_sd_full <- camera_days_count %>%
+  filter(status == "Card Full")
+prop_sd_full <- round(nrow(site_days_sd_full)/nrow(camera_days_count)*100,1)
+
+# Calculate number of trap days where batteries were dead
+site_days_batteries_dead <- camera_days_count %>%
+  filter(status == "Batteries Dead")
+prop_batteries_dead <- round(nrow(site_days_batteries_dead)/nrow(camera_days_count)*100)
+
+# Calculate number of trap days where camera was dislodged
+site_days_dislodged <- camera_days_count %>%
+  filter(status == "Camera Dislodged")
+prop_dislodged <- round(nrow(site_days_dislodged)/nrow(camera_days_count)*100,1)
+
+# Calculate average check event duration
+mean_event_duration <- round(mean(events$Event_Duration_Days, na.rm = TRUE), 1)
+
+```
+
+In the study design, indoor sites are generally set to record XX-second videos and outdoor sites are generally set to record two photos in succession.
+
+From <span style="color:blue">**`r start_date`**</span>, cameras were deployed at <span style="color:blue">**`r nrow(site_list)`**</span> sites over <span style="color:blue">**`r format(nrow(study_days), big.mark = ",")`**</span> days, for a total of <span style="color:blue">**`r format(nrow(camera_days_count), big.mark = ",")`**</span> camera days. <span style="color:blue">**`r nrow(count_natural)`**</span> (<span style="color:blue">**`r prop_natural`%**</span>) cameras are located at natural sites and <span style="color:blue">**`r nrow(count_building)`**</span> (<span style="color:blue">**`r prop_building`%**</span>) are located at building sites. The cameras were functional for <span style="color:blue">**`r format(nrow(site_days_functional), big.mark = ",")`**</span> camera days, <span style="color:blue">**`r prop_functional`%**</span> of the study period. Camera function was interrupted when a camera had a full SD card (<span style="color:blue">**`r format(nrow(site_days_sd_full), big.mark = ",")`**</span> camera days [<span style="color:blue">**`r prop_sd_full`%**</span>]), a dead battery (<span style="color:blue">**`r format(nrow(site_days_batteries_dead), big.mark = ",")`**</span> camera days [<span style="color:blue">**`r prop_batteries_dead`%**</span>]), or was dislodged or misplaced (<span style="color:blue">**`r format(nrow(site_days_dislodged), big.mark = ",")`**</span> camera days [<span style="color:blue">**`r prop_dislodged`%**</span>]).
+
+Camera data is collected seasonally, on average every 3 months. Across all sites, camera data has been collected <span style="color:blue">**`r format(nrow(events), big.mark = ",")`**</span> times. Each check event covers an average of <span style="color:blue">**`r mean_event_duration`**</span> camera days, with an average of NUMBER (PERCENT) functional camera days.
+
+```{r maintenancegraphs, include=TRUE, echo=FALSE}
+# create dataframe with both number of cameras deployed and number of cameras functioning for each study day
+functional_study_days <- left_join(
+  study_days,
+  functional_trap_days
+)
+
+# Plot out relationship between date and functionality 
+study_period_plot <- ggplot(functional_study_days) +
+  geom_col(aes(x = lubridate::ymd(date), y = n_cameras_deployed)) +
+  geom_col(aes(x = lubridate::ymd(date), y = n_cameras_functional, color = "tomato")) +
+  scale_x_date(date_breaks = "1 month") +
+  labs(x = "Date", y = "Number of cameras", caption = "Fig. 1. Number of cameras deployed (black) and functioning (red) on each study day.") +
+  theme(axis.text.x = element_text(angle=45))
+study_period_plot
+
+# Plot out relationship between date and functionality (values)
+ggplot(trapdays, aes(fill=status, y=site_id, x=lubridate::ymd(date))) + 
+    geom_bar(position="stack", stat="identity") + 
+ # scale_x_date(date_breaks = "1 month") +
+    labs(x = "Date", y = "Number of cameras", caption = "Fig. 1. Number of cameras deployed (black) and functioning (red) on each study day.") +
+  theme(axis.text.x = element_text(angle=45))   
+
+
+# Plot out relationship between date and functionality (% cameras)
+ggplot(trapdays, aes(fill=status, y=site_id, x=lubridate::ymd(date))) + 
+    geom_bar(position="fill", stat="identity") + 
+  scale_x_date(date_breaks = "1 month") +
+    labs(x = "Date", y = "Number of cameras", caption = "Fig. 1. Number of cameras deployed (black) and functioning (red) on each study day.") +
+  theme(axis.text.x = element_text(angle=45))   
+```
+
+## Data Storage and Status
+``` {r storage, include=TRUE, echo=FALSE}
+
+# Calculate number of check events that are backed up to 2 physical locations
+backup <- events %>%
+  filter(On_Drake_Harddrive == "Yes") %>%
+  filter(On_Monarch_Harddrive == "Yes") %>%
+  nrow()
+count_events <- nrow(events)
+prop_backup <- round(backup/count_events*100,1)
+
+# Calculate number of check events that are uploaded to Zooniverse
+upload_zooniverse <- events %>%
+  filter(Uploaded_Zooniverse != "No") %>%
+  summarise(n_upload_zooniverse = n_distinct(CameraCaptureEvent_id))
+prop_upload <- round(upload_zooniverse$n_upload_zooniverse/count_events*100,1)
+
+# Calculate number of incorrect times
+trigger_time_incorrect <- events %>%
+  filter(events$SiteTime_Correct == "No") %>%
+  select(CameraCaptureEvent_id, SiteTime_Correct, n_TriggerEvents)
+count_trigger_time_incorrect <- sum(trigger_time_incorrect$n_TriggerEvents, na.rm = TRUE)
+
+```
+
+Camera data is stored by check event. Of the <span style="color:blue">**`r nrow(events)`**</span> check events, <span style="color:blue">**`r backup`**</span> (<span style="color:blue">**`r prop_backup`%**</span>) are stored in two physical locations. <span style="color:blue">**`r upload_zooniverse$n_upload_zooniverse`**</span> (<span style="color:blue">**`r prop_upload`%**</span>) are uploaded to the Canyon Critters Zooniverse project.
+
+Camera data is not always aligned to the correct time. Cameras may have their internal times offset from the correct time at the site. During a camera check, the discrepancy between the camera's internal time and the current time is recorded. Time adjustments have been confirmed for X, but need to be addressed for <span style="color:blue">**`r count_trigger_time_incorrect`**</span> trigger events. Of the incorrect times, X% have been corrected to UTC.
+
+Camera checks occur in two time zones (UTC -6 and UTC -7). Arizona uses UTC -7 year-round, while Utah uses UTC -7 during standard time and UTC -6 during Daylight Savings Time. After being standardized to UTC, trigger events are corrected to the appropriate time zone for the location and date where they were recorded. X% of times have been corrected to the appropriate time zone.
+
+``` {r storagegraphs, include = TRUE, echo = FALSE}
+# create dataframe with 
+
+# plot progress of Zooniverse uploads
+upload_zooniverse_plot <- ggplot(events) +
+  geom_bar(aes(x = lubridate::ymd(Uploaded_Zooniverse))) +
+  scale_x_date(date_breaks = "1 month") +
+  labs(x = "Date", y = "Check events uploaded to Zooniverse") +
+  theme(axis.text.x = element_text(angle=45))
+upload_zooniverse_plot 
+
+```
+
+## Preliminary Analysis
+
+``` {r analysis, include =TRUE, echo = FALSE}
+
+# Count number of trigger events across all sites and dates
+count_triggers_total <- sum(events$n_TriggerEvents, na.rm = TRUE)
+
+#Calculate proportion of animal detections
+count_detections <- detection %>%
+  filter(species_detected != "false_trigger") %>%
+  filter(!is.na(species_detected)) %>%
+  nrow()
+prop_detections <- round(count_detections/count_triggers_total*100)
+
+# Count number of trigger events across natural sites
+triggers_natural <- events %>%
+  filter(CameraSetting == "photo")
+count_triggers_natural <- sum(triggers_natural$n_TriggerEvents, na.rm = TRUE)
+# how can we actually filter for all natural sites, not just all check events that were set to photo?
+
+# Count number of trigger events across building sites
+triggers_building <- events %>%
+  filter(CameraSetting == "video")
+count_triggers_building <- sum(triggers_building$n_TriggerEvents, na.rm = TRUE)
+# how can we actually filter for all building sites, not just all check events that were set to video?
+
+```
+
+Across all sites, cameras captured <span style="color:blue">**`r format(count_triggers_total, big.mark = ",")`**</span> trigger events, of which <span style="color:blue">**`r format(count_detections, big.mark = ",")`**</span> (<span style="color:blue">**`r prop_detections`%**</span>) were animal detections. Cameras deployed at natural sites recorded two photographs per trigger event. In total, natural sites captured <span style="color:blue">**`r format(count_triggers_natural, big.mark = ",")`**</span> trigger events, covering DURATION. Cameras deployed at building sites recorded videos in 20, 30, or 60-second durations. In total, building sites captured <span style="color:blue">**`r format(count_triggers_building, big.mark = ",")`**</span> trigger events, covering DURATION.
