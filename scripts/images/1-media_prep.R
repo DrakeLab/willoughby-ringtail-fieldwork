@@ -2,9 +2,10 @@
 # This script organizes the metadata so that camera capture events can be uploaded to Zooniverse with both photos in a trigger event organized into one subject.
 
 # set up libraries 
-library(dplyr) 
-library(readr)
-library(tidyr)
+library(dplyr) # data wrangling
+library(readr) # loading files
+library(tidyr) # data wrangling
+library(stringr) # for dealing with strings
 
 # set working directory 
 
@@ -16,6 +17,9 @@ library(tidyr)
 
 # on CJ's laptop for Drake drive
 # setwd("/media/caleb/SeagateExpansionDrive/anna/media_prep/Ringtail_Cameras/")
+
+#on field laptop for Monarch drive
+
 
 setwd("/media/caleb/SeagateExpansionDrive/anna/media_prep/")
 
