@@ -1,0 +1,51 @@
+---
+title: "JSON data wrangling"
+author: "Victor Felix"
+date: "2026-01-21"
+output: html_document
+---
+
+```{r}
+library(jsonlite)
+library(stringr)
+
+# Read JSON file
+data <- fromJSON("project-9858-comments_2026-01-21.json", flatten = TRUE)
+```
+
+
+```{r}
+# get only data with comments
+subject_comments_data<-data[data$board_title=="Notes" & data$comment_focus_type=="Subject",]
+```
+
+
+```{r}
+# get only comments with expert consensus
+expert_consensus<-str_detect(subject_comments_data$comment_body, "#expert_consensus")
+
+table(str_detect(subject_comments_data$comment_body, "#expert_consensus"))
+
+subject_comments_data$consensus<-str_detect(subject_comments_data$comment_body, "#expert_consensus")
+
+# Here are the data that had consensus.
+subject_consensus_data <-subject_comments_data[subject_comments_data$consensus=="TRUE" ,]
+subject_consensus_data
+```
+
+
+```{r}
+# We need to search each "comment_focus_id" on the "subject_comments_data" and take a look at the "comment_body". Using the "comment_body" information we will have to identify which species the experts agreed about. It may have more than one comment and more than one species.
+
+expert_comments_for_analysis <- subject_comments_data[
+  subject_comments_data$comment_focus_id %in% subject_consensus_data$comment_focus_id,
+]
+#example: 99747720
+```
+
+
+```{r}
+
+```
+
+
