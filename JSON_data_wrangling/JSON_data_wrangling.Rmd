@@ -191,19 +191,16 @@ A different plot a better visualization.
 ```{r}
 # Create a vector of hashtags
 scientific_name_vector <- dual_expert_subjects$scientific_name
-# Turn it into a corpus
 scientific_name_corpus <- corpus(scientific_name_vector)
-# Tokenize 
 scientific_name_tokens <- tokens(scientific_name_corpus, remove_punct = TRUE)
-# Create a document-feature matrix counting scientific_names
 scientific_name_dfm <- dfm(scientific_name_tokens)
 
-# Set seed for reproducibility
+# Set seed 
 set.seed(100)
 
-# Plot the word cloud
+# Plot 
 textplot_wordcloud(scientific_name_dfm,
-                   max_words = 75, # max number of scientific_name to show
+                   max_words = 75, # max number of names
                    color = RColorBrewer::brewer.pal(8, "Dark2"))
 
 ```
