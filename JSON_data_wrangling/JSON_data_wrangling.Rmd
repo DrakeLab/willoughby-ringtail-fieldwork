@@ -129,7 +129,6 @@ tag_cols <- c("tag1", "tag2", "tag3", "tag4", "tag5")
 colSums(!is.na(commented_images_with_bird_tags[, tag_cols]))
 ```
 
-
 We need to identify the images based on the combined #tags of different comments. First we select only the bird data that had consensus.
 
 ```{r}
@@ -139,15 +138,19 @@ birds_with_consensus
 
 ```
 
-Let's count the number of tags in each tag column to see how many tags/rows had consensus. 
+Let's count the number of bird tags in each column that had consensus. 
 
 ```{r}
 tag_cols <- c("tag1", "tag2", "tag3", "tag4", "tag5")
 
 colSums(!is.na(birds_with_consensus[, tag_cols]))
+
+# almost all of the previous data
 ```
 
-Note that only tag1 had consensus, so I will keep working only on this column. Now we add a tag1_scientific_name column with scientific names based on each tag1 which had consensus.
+
+Now we need to consider all these information for each image to see which bird was identified in each image. Sometimes more than one bird was identified.
+
 
 ```{r}
 birds_comments_with_consensus <- birds_with_consensus %>%
