@@ -8,44 +8,202 @@ output: html_document
 ```{r}
 library(jsonlite)
 library(stringr)
-
-# Read JSON file
-data <- fromJSON("project-9858-comments_2026-01-21.json", flatten = TRUE)
+library(ggplot2)
+library(dplyr)
+library(stringr)
+library(quanteda)
+library(quanteda.textplots)
+library(dplyr)
+library(stringr)
+library(tidyr)
 ```
 
+Let's load the data
+
+```{r}
+# Read JSON file
+data <- fromJSON("project-9858-comments_2026-01-21.json", flatten = TRUE)
+
+dictionary <- read.csv("hashtag_dictionary.csv")
+```
+
+Here we subset so we use data from images that had comments
 
 ```{r}
 # get only data with comments
-subject_comments_data<-data[data$board_title=="Notes" & data$comment_focus_type=="Subject",]
+commented_images<-data[data$board_title=="Notes" & data$comment_focus_type=="Subject",]
 ```
 
+Here we get images that had consensus based on the #expert_consensus tag
 
 ```{r}
-# get only comments with expert consensus
-expert_consensus<-str_detect(subject_comments_data$comment_body, "#expert_consensus")
+# Detect #expert_consensus on the comment body
+expert_consensus<-str_detect(commented_images$comment_body, "#expert_consensus")
 
-table(str_detect(subject_comments_data$comment_body, "#expert_consensus"))
+# Find images that had consensus based on "comment_focus_id" and expert_consensus == TRUE
+images_with_consensus<-commented_images$comment_focus_id[expert_consensus]
 
-subject_comments_data$consensus<-str_detect(subject_comments_data$comment_body, "#expert_consensus")
+# Add consensus (TRUE or FALSE) column to the commented images
+commented_images$consensus <- 
+  commented_images$comment_focus_id %in% images_with_consensus
 
-# Here are the data that had consensus.
-subject_consensus_data <-subject_comments_data[subject_comments_data$consensus=="TRUE" ,]
-subject_consensus_data
+head(commented_images)
 ```
 
-
-```{r}
-# We need to search each "comment_focus_id" on the "subject_comments_data" and take a look at the "comment_body". Using the "comment_body" information we will have to identify which species the experts agreed about. It may have more than one comment and more than one species.
-
-expert_comments_for_analysis <- subject_comments_data[
-  subject_comments_data$comment_focus_id %in% subject_consensus_data$comment_focus_id,
-]
-#example: 99747720
-```
-
+Sometimes people used different tags to identify the species.
+We will get all tags from the comments body and add into a tag column.
 
 ```{r}
 
+# Function to get all %tags from each comment and include in a separate row
+get_tags <- function(df) {
+  df %>%
+    mutate(
+      tag = str_extract_all(comment_body, "#\\w+(?:_\\w+)*"),
+      tag = sapply(tag, paste, collapse = ", ")
+    )
+}
+
+commented_images_with_tags <- get_tags(commented_images)
+
+head(commented_images_with_tags)
+
+write.csv(commented_images_with_tags, file= "zoo_notes_comments.csv")
 ```
 
+Here we will keep only bird tags based on the dictionary
+We can add more data later if needed
 
+```{r}
+# Split tag column into multiple columns
+commented_images_with_tags <- commented_images_with_tags %>%
+  separate(tag, into = paste0("tag", 1:5), sep = ",", fill = "right")
+
+head(commented_images_with_tags)
+
+```
+
+Here we need to keep only the ones in the dictionary. To do this I may need to subset by column 
+
+```{r}
+# create a bird dictionary
+bird_dictionary <-dictionary[dictionary$Class == "Ave",]
+
+# get bird tags
+bird_tags <- unique(bird_dictionary$tag)
+
+# create a bird dictionary
+is_bird_tag1 <- commented_images_with_tags$tag1 %in% bird_tags
+is_bird_tag2 <- commented_images_with_tags$tag2 %in% bird_tags
+is_bird_tag3 <- commented_images_with_tags$tag3 %in% bird_tags
+is_bird_tag4 <- commented_images_with_tags$tag4 %in% bird_tags
+is_bird_tag5 <- commented_images_with_tags$tag5 %in% bird_tags
+
+# Remove from each column the names that are not in the dictionary
+commented_images_with_tags$tag1[!is_bird_tag1] <- NA
+commented_images_with_tags$tag2[!is_bird_tag2] <- NA
+commented_images_with_tags$tag3[!is_bird_tag3] <- NA
+commented_images_with_tags$tag4[!is_bird_tag4] <- NA
+commented_images_with_tags$tag5[!is_bird_tag5] <- NA
+```
+
+Count the number of tags in each tag column  
+
+```{r}
+tag_cols <- c("tag1", "tag2", "tag3", "tag4", "tag5")
+
+colSums(!is.na(commented_images_with_tags[, tag_cols]))
+```
+
+We need to identify the images based on the combined #tags of different comments. First we select only the bird data that had consensus.
+
+```{r}
+# Select only the comments from images that had consensus
+birds_with_consensus<-commented_images_with_tags[commented_images_with_tags$consensus==TRUE,]
+birds_with_consensus
+
+```
+
+Count the number of tags in each tag column 
+
+```{r}
+tag_cols <- c("tag1", "tag2", "tag3", "tag4", "tag5")
+
+colSums(!is.na(birds_with_consensus[, tag_cols]))
+```
+
+Note that only the ones identified at tag1 had consensus
+
+Now we add a scientific name column with scientific names
+
+```{r}
+birds_comments_with_consensus <- birds_with_consensus %>%
+  left_join(
+    dictionary %>% select(tag, scientific_name),
+    by = c("tag1" = "tag")
+  ) %>%
+  rename(tag1_scientific_name = scientific_name)
+
+birds_comments_with_consensus
+```
+
+Here we need to take a look at the species in comments that had consensus.
+I single image can have more than one identified species, but we only need the species that had their names repeated at least twice in a single image.
+
+
+```{r}
+identified_birds_by_image <- birds_comments_with_consensus %>%
+  group_by(comment_focus_id, tag1_scientific_name) %>%
+    summarise(n_id = n())
+
+dual_expert_subjects <- identified_birds_by_image %>%
+  filter(n_id > 1) 
+```
+
+There are some NAs in the tag1_scientific_name, if is better to drop them. If you want you may drop them before this step.
+
+```{r}
+# drop NAs
+dual_expert_subjects <- na.omit(dual_expert_subjects)
+# rename the tag1_scientific_name to simply scientific_name
+dual_expert_subjects <- dual_expert_subjects %>%
+  rename(scientific_name = tag1_scientific_name)
+
+#visualize
+head(dual_expert_subjects)
+
+# saving
+write.csv(dual_expert_subjects,file="dual_expert_subjects.csv")
+```
+Plot the identified species
+
+```{r}
+# Barplot
+ggplot(dual_expert_subjects, aes(x = scientific_name)) +
+  geom_bar(fill = "steelblue") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(title = "Repeated Hashtags per comment_focus_id", y = "Count", x = "Hashtag")
+
+```
+A different plot a better visualization.
+
+```{r}
+# Create a vector of hashtags
+scientific_name_vector <- dual_expert_subjects$scientific_name
+# Turn it into a corpus
+scientific_name_corpus <- corpus(scientific_name_vector)
+# Tokenize 
+scientific_name_tokens <- tokens(scientific_name_corpus, remove_punct = TRUE)
+# Create a document-feature matrix counting scientific_names
+scientific_name_dfm <- dfm(scientific_name_tokens)
+
+# Set seed for reproducibility
+set.seed(100)
+
+# Plot the word cloud
+textplot_wordcloud(scientific_name_dfm,
+                   max_words = 75, # max number of scientific_name to show
+                   color = RColorBrewer::brewer.pal(8, "Dark2"))
+
+```
