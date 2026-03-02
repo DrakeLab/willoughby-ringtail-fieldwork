@@ -18,23 +18,22 @@ library(stringr)
 library(tidyr)
 ```
 
-Let's load the data
+Let's load the data and the #hashtags dictionary.
 
 ```{r}
 # Read JSON file
 data <- fromJSON("project-9858-comments_2026-01-21.json", flatten = TRUE)
-
 dictionary <- read.csv("hashtag_dictionary.csv")
 ```
 
-Here we subset so we use data from images that had comments
+Here we subset the data so we only use images that had comments.
 
 ```{r}
 # get only data with comments
 commented_images<-data[data$board_title=="Notes" & data$comment_focus_type=="Subject",]
 ```
 
-Here we get images that had consensus based on the #expert_consensus tag
+Here we subset images that had consensus based on the #expert_consensus tag.
 
 ```{r}
 # Detect #expert_consensus on the comment body
@@ -50,8 +49,7 @@ commented_images$consensus <-
 head(commented_images)
 ```
 
-Sometimes people used different tags to identify the species.
-We will get all tags from the comments body and add into a tag column.
+Here we will get all tags from the comments body and add into a single tag column.
 
 ```{r}
 
@@ -71,19 +69,32 @@ head(commented_images_with_tags)
 write.csv(commented_images_with_tags, file= "zoo_notes_comments.csv")
 ```
 
-Here we will keep only bird tags based on the dictionary
-We can add more data later if needed
+Sometimes people used more than one #tag in the same comment, so we will split these tags in 5 columns (tag1, tag2, tag3, tag4, tag5). 
 
 ```{r}
 # Split tag column into multiple columns
 commented_images_with_tags <- commented_images_with_tags %>%
-  separate(tag, into = paste0("tag", 1:5), sep = ",", fill = "right")
+  separate(tag,
+         into = paste0("tag", 1:5),
+         sep = ",\\s*",
+         fill = "right")
 
 head(commented_images_with_tags)
 
 ```
 
-Here we need to keep only the ones in the dictionary. To do this I may need to subset by column 
+Let's count the number of tags in each tag column  
+
+```{r}
+tag_cols <- c("tag1", "tag2", "tag3", "tag4", "tag5")
+
+colSums(!is.na(commented_images_with_tags[, tag_cols]))
+```
+
+
+We want to subset only the #tags present in the bird dictionary. 
+
+To do this I will create Booleans (True/False) for each column based on the dictionary data. Later, I will set to NA all #tags that were False in the Boolean (not in the bird dictionary). This is a good approach to maintain values which may be valid in one tag column but not in the others.
 
 ```{r}
 # create a bird dictionary
@@ -105,15 +116,19 @@ commented_images_with_tags$tag2[!is_bird_tag2] <- NA
 commented_images_with_tags$tag3[!is_bird_tag3] <- NA
 commented_images_with_tags$tag4[!is_bird_tag4] <- NA
 commented_images_with_tags$tag5[!is_bird_tag5] <- NA
+
+# let's create a new dataframe for clarity
+commented_images_with_bird_tags <- commented_images_with_tags
 ```
 
-Count the number of tags in each tag column  
+Let's count the number of bird tags in each tag column  
 
 ```{r}
 tag_cols <- c("tag1", "tag2", "tag3", "tag4", "tag5")
 
-colSums(!is.na(commented_images_with_tags[, tag_cols]))
+colSums(!is.na(commented_images_with_bird_tags[, tag_cols]))
 ```
+
 
 We need to identify the images based on the combined #tags of different comments. First we select only the bird data that had consensus.
 
@@ -124,7 +139,7 @@ birds_with_consensus
 
 ```
 
-Count the number of tags in each tag column 
+Let's count the number of tags in each tag column to see how many tags/rows had consensus. 
 
 ```{r}
 tag_cols <- c("tag1", "tag2", "tag3", "tag4", "tag5")
@@ -132,9 +147,7 @@ tag_cols <- c("tag1", "tag2", "tag3", "tag4", "tag5")
 colSums(!is.na(birds_with_consensus[, tag_cols]))
 ```
 
-Note that only the ones identified at tag1 had consensus
-
-Now we add a scientific name column with scientific names
+Note that only tag1 had consensus, so I will keep working only on this column. Now we add a tag1_scientific_name column with scientific names based on each tag1 which had consensus.
 
 ```{r}
 birds_comments_with_consensus <- birds_with_consensus %>%
@@ -146,10 +159,7 @@ birds_comments_with_consensus <- birds_with_consensus %>%
 
 birds_comments_with_consensus
 ```
-
-Here we need to take a look at the species in comments that had consensus.
-I single image can have more than one identified species, but we only need the species that had their names repeated at least twice in a single image.
-
+Here we need to take a look at the species in the comments that had consensus. A single image can have more than one identified species, but we only need the species that had their names repeated at least twice.
 
 ```{r}
 identified_birds_by_image <- birds_comments_with_consensus %>%
