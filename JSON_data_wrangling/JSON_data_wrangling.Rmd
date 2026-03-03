@@ -1,7 +1,7 @@
 ---
 title: "JSON data wrangling"
 author: "Victor Felix"
-date: "2026-01-21"
+date: "2026-03-03"
 output: html_document
 ---
 
@@ -73,7 +73,7 @@ Sometimes people used more than one #tag in the same comment, so we will split t
 
 ```{r}
 # Split tag column into multiple columns
-# I had to add that separator because there were spaces sometimes 
+# I had to add ,\\s* separator because there were spaces sometimes 
 
 commented_images_with_tags <- commented_images_with_tags %>%
   separate(tag,
@@ -131,7 +131,7 @@ tag_cols <- c("tag1", "tag2", "tag3", "tag4", "tag5")
 colSums(!is.na(commented_images_with_bird_tags[, tag_cols]))
 ```
 
-We need to identify the images based on the combined #tags of different comments. First we select only the bird data that had consensus.
+We need to identify the images based on the combined #tags of different comments for the same comment_focus_id. First we subset only the bird data that had consensus from the previous bird data.
 
 ```{r}
 # Select only the comments from images that had consensus
@@ -140,7 +140,7 @@ birds_with_consensus
 
 ```
 
-Let's count the number of bird tags in each column that had consensus. 
+Let's count the number of bird tags by column in the bird data with consensus. 
 
 ```{r}
 tag_cols <- c("tag1", "tag2", "tag3", "tag4", "tag5")
@@ -151,7 +151,7 @@ colSums(!is.na(birds_with_consensus[, tag_cols]))
 ```
 
 
-Now we need to consider all these information for each image to see which bird was identified in each image. Let's add columns with scientific names for each #hashtag column
+Now we need to use these information to identify birds in each image. First, let's add columns with scientific names for each #hashtag column.
 
 
 ```{r}
@@ -178,11 +178,14 @@ birds_comments_with_consensus <- birds_with_consensus %>%
 head(birds_comments_with_consensus)
 ```
 
-Maybe the same species is being identified in more than once in the same comment. We will keep only one unique species name in a given comment. I will also remove "Ave" if there is a more specific bird identification.
+Maybe the same species are being identified more than once in the same comment, so we will keep only one unique species name in a given comment. Let's also remove "Ave" if there is a more specific bird identification.
 
 ```{r}
 
 # this function will do what is described above
+# remove duplicate species names in the same comment
+# remove Ave if there is another bird identification present
+
 remove_duplicates_per_comment <- function(df, sci_name_cols) {
   # loop on each row
   for (i in seq_len(nrow(df))) {
@@ -205,7 +208,7 @@ remove_duplicates_per_comment <- function(df, sci_name_cols) {
   return(df)
 }
 
-# use the names of the columns we want to evaluate
+# let's use the names of the columns we want to evaluate
 sci_name_cols_ <- paste0("scientific_name_tag", 1:3)
 
 # apply the function
@@ -219,7 +222,7 @@ birds_comments_with_consensus <-
 
 ```
 
-Let's count the number of identified birds in each scientific name column. 
+Let's count the number of unique scientific names across all comments. 
 
 ```{r}
 
@@ -227,10 +230,10 @@ colSums(!is.na(birds_comments_with_consensus[, sci_name_cols_]))
 
 ```
 
-Here I create a new dataframe with comment_focus_id and the scientific names in the comments. The species identified will be the ones where the scientific name occurs more than once in the same comment_focus_id.
+Here we create a new dataframe with comment_focus_id and the scientific names that we subset based on species mentioned in different comments. 
 
 ```{r}
-birds_long <-birds_comments_with_consensus %>%
+unique_birds_per_comment <-birds_comments_with_consensus %>%
   select(comment_focus_id, starts_with("scientific")) %>%
   pivot_longer(
     cols = starts_with("scientific"),
@@ -241,11 +244,11 @@ birds_long <-birds_comments_with_consensus %>%
   select(comment_focus_id, scientific_name)
 ```
 
-Here we need to take a look at the species in the comments that had consensus. A single image can have more than one identified species, but we only need the species that had their names repeated at least twice.
+Here we identify the species if they had their names repeated at least twice.
 
 ```{r}
 # count how many scientific names 
-identified_birds_by_image <- birds_long %>%
+identified_birds_by_image <- unique_birds_per_comment %>%
   group_by(comment_focus_id, scientific_name) %>%
     summarise(n_id = n())
 
