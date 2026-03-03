@@ -73,10 +73,12 @@ Sometimes people used more than one #tag in the same comment, so we will split t
 
 ```{r}
 # Split tag column into multiple columns
+# I had to add that separator because there were spaces sometimes 
+
 commented_images_with_tags <- commented_images_with_tags %>%
   separate(tag,
          into = paste0("tag", 1:5),
-         sep = ",\\s*",
+         sep = ",\\s*", # split at a comma followed by optional spaces
          fill = "right")
 
 head(commented_images_with_tags)
